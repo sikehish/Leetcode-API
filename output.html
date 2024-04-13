@@ -1,0 +1,3104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@LeetCode" />
+    <meta
+      property="og:image"
+      content="https://leetcode.com/static/images/LeetCode_Sharing.png"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="LeetCode" />
+    <title>- LeetCode</title>
+    <meta name="robots" content="index,follow" />
+    <meta
+      name="description"
+      content="Can you solve this real interview question?  - Level up your coding skills and quickly land a job. This is the best place to expand your knowledge and get prepared for your next interview."
+    />
+    <meta property="og:title" content=" - LeetCode" />
+    <meta
+      property="og:description"
+      content="Can you solve this real interview question?  - Level up your coding skills and quickly land a job. This is the best place to expand your knowledge and get prepared for your next interview."
+    />
+    <meta
+      property="og:url"
+      content="https://leetcode.com/problems/minimum-rectangles-to-cover-points/description"
+    />
+    <meta name="next-head-count" content="13" />
+    <script type="text/javascript">
+      <!-- NREUM: (4) -->
+    </script>
+    <link
+      rel="preload"
+      href="/_next/static/css/b0c12c1658e81ebe.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/b0c12c1658e81ebe.css"
+      data-n-g=""
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/28464cd1e07f6336.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/28464cd1e07f6336.css"
+      data-n-p=""
+    />
+    <noscript data-n-css=""></noscript>
+    <script
+      defer=""
+      nomodule=""
+      src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"
+    ></script>
+    <script
+      src="/_next/static/chunks/webpack-6becad73db897eca.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/framework-ac6550882a30386c.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/main-495ffa8bb232c0d2.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/pages/_app-2e94ddd491f594b7.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/c829854d-a992cebebd6d0e8c.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/ee9ce975-d8b710fa976f08e6.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/da6571b0-29a7958305454477.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/c6bbd088-b798460e16c8f636.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/f1b7312e-2b4a1c555f0ea770.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/d3048c20-cd2cdb719e8f43f6.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/d2094a0f-68cbb23e61e65782.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/d59bccd2-9d94c257052d35f0.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/e6848cf3-e709bce199e80e90.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/c46d6b60-4ee2bbc1b979c6f9.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/4b358913-7b696ad89d9cddd0.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/129-07e4846883f0f080.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/499-70164589ac75aa2d.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/1286-bf985f755c528899.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/3853-aa2f3ad7d9d7a410.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/1664-daeac2d69868e96c.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/4749-ee3ade58ef975b83.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/1743-3fc6a31a223c0b56.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/6908-70dabd4e9b1520d4.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/9148-19ae8a71d2a7f39b.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/7367-f479232bf4a9c2a8.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/3376-23b498caba8b61d1.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/7113-fe1fc737bf71c47c.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/7459-c20971d717ffa93c.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/8695-e6ffdcc8aea42e83.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/8931-82276d15517b38e1.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/2528-6cfcc6665e540457.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/5537-0b3b92cff15d0c7c.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/761-531dee881511eb3b.js"
+      defer=""
+    ></script>
+    <script src="/_next/static/chunks/69-5d9fc83e9812c2f2.js" defer=""></script>
+    <script
+      src="/_next/static/chunks/1380-b3f599b90a1f022c.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/5310-95a98a6f53155d36.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/3307-048e24fe09ac2d19.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/4066-2a9972620df4bad3.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/8760-2d54196f7a6a2c8d.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/6999-3a8e0d41f30196e9.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/4994-2c8c6ccdd961030a.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/6724-60fc488eb7827a01.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/7031-33b44b498db00339.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/3308-69540da4518ffc22.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/616-f2418133e7ead31b.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/8829-803eb96819916391.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/5829-6397da9acc44266f.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/9791-54f383b37b2db6e4.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/7221-d6317c684677aef2.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/3392-d067af3f50e52829.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/3878-a8170845975cbeda.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/pages/problems/%5Bslug%5D/%5B%5B...tab%5D%5D-8a3623578c0ddd0a.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/0C-PWTc2B7J0DqOVTs_E0/_buildManifest.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/0C-PWTc2B7J0DqOVTs_E0/_ssgManifest.js"
+      defer=""
+    ></script>
+  </head>
+  <body>
+    <div id="__next">
+      <script>
+        !(function () {
+          try {
+            var d = document.documentElement,
+              c = d.classList;
+            c.remove("light", "dark");
+            var e = localStorage.getItem("lc-dark-side");
+            if ("system" === e || (!e && true)) {
+              var t = "(prefers-color-scheme: dark)",
+                m = window.matchMedia(t);
+              if (m.media !== t || m.matches) {
+                d.style.colorScheme = "dark";
+                c.add("dark");
+              } else {
+                d.style.colorScheme = "light";
+                c.add("light");
+              }
+            } else if (e) {
+              c.add(e || "");
+            }
+            if (e === "light" || e === "dark") d.style.colorScheme = e;
+          } catch (e) {}
+        })();
+      </script>
+      <script lang="javascript">
+            (() => {
+              const style = document.createElement('style')
+              style.className = 'qd-description-style'
+              style.innerHTML = `
+                .xFUwe pre{border-color:var(--border-tertiary);border-left-width:2px;color:var(--text-secondary);font-family:Menlo,sans-serif;font-size:.875rem;line-height:1.25rem;margin-bottom:1rem;margin-top:1rem;overflow:visible;padding-left:1rem;white-space:pre-wrap}.xFUwe pre strong{--tw-text-opacity:1;color:rgb(38 38 38/var(--tw-text-opacity))}.dark .xFUwe pre strong{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.xFUwe a{--tw-text-opacity:1;color:rgb(0 122 255/var(--tw-text-opacity))}.dark .xFUwe a{--tw-text-opacity:1;color:rgb(10 132 255/var(--tw-text-opacity))}.xFUwe ul{list-style-type:disc}.xFUwe ol,.xFUwe ul{margin-bottom:1rem;margin-left:1rem;margin-right:1rem}.xFUwe ol{list-style-type:decimal}.xFUwe li{margin-bottom:.75rem}.xFUwe p{margin-bottom:1rem}.xFUwe code{background-color:#000a2008;border-color:#0000000d;border-radius:5px;border-width:1px;color:#262626bf;font-family:Menlo,sans-serif;font-size:.75rem;line-height:1rem;padding:.125rem;white-space:pre-wrap}.dark .xFUwe code{background-color:#ffffff12;border-color:#f7faff1f;color:#eff1f6bf}.xFUwe blockquote{border-color:#0000000d;border-left-width:4px;color:#262626bf;padding-left:1rem}.dark .xFUwe blockquote{border-color:#f7faff1f;color:#eff1f6bf}.content-example-testcase{--tw-text-opacity:1;color:rgb(38 38 38/var(--tw-text-opacity));font-size:1rem;font-weight:500;line-height:1.5rem;margin-bottom:1rem}.dark .content-example-testcase{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.xFUwe img{height:auto!important;max-width:100%}.xFUwe .V7xOx{--tw-text-opacity:1;color:rgb(38 38 38/var(--tw-text-opacity));font-size:1rem;font-weight:500;line-height:1.5rem;margin-bottom:1rem}:is(.eLEz2 .xFUwe .V7xOx){--tw-text-opacity:1;color:rgb(38 38 38/var(--tw-text-opacity))}.example-block{border-color:var(--border-tertiary);border-left-width:2px;color:var(--text-secondary);font-size:14px;margin-bottom:1rem;margin-top:1rem;overflow:visible;padding-left:1rem;pre{border-left-width:0;border-style:none;padding-left:0}.example-io{font-family:Menlo,sans-serif}.example-io{font-size:.85rem}pre.example-io{overflow:auto}pre.example-io{white-space:pre}}.xFUwe table{--tw-text-opacity:1;border-radius:.5rem;border-style:hidden;box-shadow:0 0 0 1px #e5e5e5;color:rgb(38 38 38/var(--tw-text-opacity));margin-bottom:.75rem}.dark .xFUwe table{--tw-border-opacity:1;--tw-text-opacity:1;border-color:rgb(74 74 74/var(--tw-border-opacity));box-shadow:0 0 0 1px #424242;color:rgb(255 255 255/var(--tw-text-opacity))}.xFUwe table th{--tw-border-opacity:1;background-color:#000a200d;border-color:rgb(223 223 223/var(--tw-border-opacity));border-width:1px;font-weight:500;padding:.5rem .625rem}.xFUwe table th:first-child{border-top-left-radius:.5rem}.xFUwe table th:last-child{border-top-right-radius:.5rem}.dark .xFUwe table th{--tw-border-opacity:1;background-color:#ffffff1a;border-color:rgb(74 74 74/var(--tw-border-opacity))}.xFUwe table td{--tw-border-opacity:1;border-color:rgb(223 223 223/var(--tw-border-opacity));border-width:1px;padding:.5rem .625rem}.dark .xFUwe table td{--tw-border-opacity:1;border-color:rgb(74 74 74/var(--tw-border-opacity))}.xFUwe .language-md .table{display:inline!important}
+        /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2NvbXBvbmVudHMvcXVlc3Rpb24tZGV0YWlsL2Rlc2NyaXB0aW9uL2NvbnRlbnQvaHRtbC1jb250ZW50Lmlzby5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0UsV0FBQSxtQ0FBOEgsQ0FBOUgscUJBQThILENBQTlILDJCQUE4SCxDQUE5SCw0QkFBOEgsQ0FBOUgsaUJBQThILENBQTlILG1CQUE4SCxDQUE5SCxrQkFBOEgsQ0FBOUgsZUFBOEgsQ0FBOUgsZ0JBQThILENBQTlILGlCQUE4SCxDQUE5SCxvQkFBOEgsQ0FJOUgsa0JBQUEsbUJBQW1CLENBQW5CLDBDQUFtQixDQUluQix3QkFBQSxtQkFBd0IsQ0FBeEIsNkNBQXdCLENBSXhCLFNBQUEsbUJBQWtCLENBQWxCLDJDQUFrQixDQUlsQixlQUFBLG1CQUF1QixDQUF2Qiw0Q0FBdUIsQ0FJdkIsVUFBQSxvQkFBMEIsQ0FJMUIsb0JBSkEsa0JBQTBCLENBQTFCLGdCQUEwQixDQUExQixpQkFJNkIsQ0FBN0IsVUFBQSx1QkFBNkIsQ0FJN0IsVUFBQSxvQkFBVyxDQUlYLFNBQUEsa0JBQVcsQ0FJWCxZQUFBLDBCQUFrSCxDQUFsSCxzQkFBa0gsQ0FBbEgsaUJBQWtILENBQWxILGdCQUFrSCxDQUFsSCxlQUFrSCxDQUFsSCw0QkFBa0gsQ0FBbEgsZ0JBQWtILENBQWxILGdCQUFrSCxDQUFsSCxlQUFrSCxDQUFsSCxvQkFBa0gsQ0FJbEgsa0JBQUEsMEJBQTZELENBQTdELHNCQUE2RCxDQUE3RCxlQUE2RCxDQUk3RCxrQkFBQSxzQkFBb0QsQ0FBcEQscUJBQW9ELENBQXBELGVBQW9ELENBQXBELGlCQUFvRCxDQUlwRCx3QkFBQSxzQkFBOEMsQ0FBOUMsZUFBOEMsQ0FJOUMsMEJBQUEsbUJBQThDLENBQTlDLDBDQUE4QyxDQUE5QyxjQUE4QyxDQUE5QyxlQUE4QyxDQUE5QyxrQkFBOEMsQ0FBOUMsa0JBQThDLENBSTlDLGdDQUFBLG1CQUF3QixDQUF4Qiw2Q0FBd0IsQ0FHMUIsV0FFRSxxQkFBdUIsQ0FEdkIsY0FFRixDQUdFLGNBQUEsbUJBQWdFLENBQWhFLDBDQUFnRSxDQUFoRSxjQUFnRSxDQUFoRSxlQUFnRSxDQUFoRSxrQkFBZ0UsQ0FBaEUsa0JBQWdFLENBQWhFLDBCQUFBLG1CQUFnRSxDQUFoRSwwQ0FBZ0UsQ0FJaEUsZUFBQSxtQ0FBbUcsQ0FBbkcscUJBQW1HLENBQW5HLDJCQUFtRyxDQUFuRyxjQUFtRyxDQUFuRyxrQkFBbUcsQ0FBbkcsZUFBbUcsQ0FBbkcsZ0JBQW1HLENBQW5HLGlCQUFtRyxDQUVqRyxJQUFBLG1CQUFrQyxDQUFsQyxpQkFBa0MsQ0FBbEMsY0FBa0MsQ0FHbEMsWUFBQSw0QkFBZ0MsQ0FBaEMsWUFBQSxnQkFBZ0MsQ0FHaEMsZUFBQSxhQUFtQyxDQUFuQyxlQUFBLGVBQW1DLENBUjhELENBWXJHLGFBRUUsbUJBQWlELENBQWpELG1CQUFpRCxDQUFqRCxtQkFBaUQsQ0FEakQsNEJBQTZCLENBQzdCLDBDQUFpRCxDQUFqRCxvQkFDRixDQUVBLG1CQUVFLHFCQUEyQyxDQUEzQyxtQkFBMkMsQ0FBM0MsbURBQTJDLENBRDNDLDRCQUE2QixDQUM3Qiw2Q0FDRixDQUdFLGdCQUFBLHFCQUFtRSxDQUFuRSwwQkFBbUUsQ0FBbkUsc0RBQW1FLENBQW5FLGdCQUFtRSxDQUFuRSxlQUFtRSxDQUFuRSxxQkFBbUUsQ0FJbkUsNEJBQUEsNEJBQW9CLENBSXBCLDJCQUFBLDZCQUFvQixDQUlwQixzQkFBQSxxQkFBd0MsQ0FBeEMsMEJBQXdDLENBQXhDLG1EQUF3QyxDQUl4QyxnQkFBQSxxQkFBNkMsQ0FBN0Msc0RBQTZDLENBQTdDLGdCQUE2QyxDQUE3QyxxQkFBNkMsQ0FJN0Msc0JBQUEscUJBQXlCLENBQXpCLG1EQUF5QixDQUczQiwyQkFLRSx3QkFDRiIsInNvdXJjZXNDb250ZW50IjpbIi5odG1sIHByZSB7XG4gIEBhcHBseSBib3JkZXItYm9yZGVyLXRlcnRpYXJ5IGZvbnQtbWVubG8gdGV4dC10ZXh0LXNlY29uZGFyeSBteS00IG92ZXJmbG93LXZpc2libGUgd2hpdGVzcGFjZS1wcmUtd3JhcCBib3JkZXItbC0yIHBsLTQgdGV4dC1zbTtcbn1cblxuLmh0bWwgcHJlIHN0cm9uZyB7XG4gIEBhcHBseSB0ZXh0LWxhYmVsLTE7XG59XG5cbjpnbG9iYWwoLmRhcmspIC5odG1sIHByZSBzdHJvbmcge1xuICBAYXBwbHkgdGV4dC1kYXJrLWxhYmVsLTE7XG59XG5cbi5odG1sIGEge1xuICBAYXBwbHkgdGV4dC1ibHVlLXM7XG59XG5cbjpnbG9iYWwoLmRhcmspIC5odG1sIGEge1xuICBAYXBwbHkgdGV4dC1kYXJrLWJsdWUtcztcbn1cblxuLmh0bWwgdWwge1xuICBAYXBwbHkgbXgtNCBtYi00IGxpc3QtZGlzYztcbn1cblxuLmh0bWwgb2wge1xuICBAYXBwbHkgbXgtNCBtYi00IGxpc3QtZGVjaW1hbDtcbn1cblxuLmh0bWwgbGkge1xuICBAYXBwbHkgbWItMztcbn1cblxuLmh0bWwgcCB7XG4gIEBhcHBseSBtYi00O1xufVxuXG4uaHRtbCBjb2RlIHtcbiAgQGFwcGx5IGJvcmRlci1kaXZpZGVyLTMgYmctZmlsbC00IGZvbnQtbWVubG8gdGV4dC1sYWJlbC0yIHdoaXRlc3BhY2UtcHJlLXdyYXAgcm91bmRlZCBib3JkZXIgcHgtMC41IHB5LTAuNSB0ZXh0LXhzO1xufVxuXG46Z2xvYmFsKC5kYXJrKSAuaHRtbCBjb2RlIHtcbiAgQGFwcGx5IGJvcmRlci1kYXJrLWRpdmlkZXItMyBiZy1kYXJrLWZpbGwtNCB0ZXh0LWRhcmstbGFiZWwtMjtcbn1cblxuLmh0bWwgYmxvY2txdW90ZSB7XG4gIEBhcHBseSBib3JkZXItZGl2aWRlci0zIHRleHQtbGFiZWwtMiBib3JkZXItbC00IHBsLTQ7XG59XG5cbjpnbG9iYWwoLmRhcmspIC5odG1sIGJsb2NrcXVvdGUge1xuICBAYXBwbHkgYm9yZGVyLWRhcmstZGl2aWRlci0zIHRleHQtZGFyay1sYWJlbC0yO1xufVxuXG46Z2xvYmFsKC5jb250ZW50LWV4YW1wbGUtdGVzdGNhc2UpIHtcbiAgQGFwcGx5IHRleHQtbGFiZWwtMSBtYi00IHRleHQtYmFzZSBmb250LW1lZGl1bTtcbn1cblxuOmdsb2JhbCguZGFyayAuY29udGVudC1leGFtcGxlLXRlc3RjYXNlKSB7XG4gIEBhcHBseSB0ZXh0LWRhcmstbGFiZWwtMTtcbn1cblxuLmh0bWwgaW1nIHtcbiAgbWF4LXdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IGF1dG8gIWltcG9ydGFudDtcbn1cblxuLmh0bWwgLmV4YW1wbGUge1xuICBAYXBwbHkgdGV4dC1sYWJlbC0xIGRhcms6dGV4dC1sYWJlbC0xIG1iLTQgdGV4dC1iYXNlIGZvbnQtbWVkaXVtO1xufVxuXG46Z2xvYmFsKC5leGFtcGxlLWJsb2NrKSB7XG4gIEBhcHBseSBib3JkZXItYm9yZGVyLXRlcnRpYXJ5IHRleHQtdGV4dC1zZWNvbmRhcnkgbXktNCBvdmVyZmxvdy12aXNpYmxlIGJvcmRlci1sLTIgcGwtNCB0ZXh0LVsxNHB4XTtcbiAgcHJlIHtcbiAgICBAYXBwbHkgYm9yZGVyLWwtMCBib3JkZXItbm9uZSBwbC0wO1xuICB9XG4gIDpnbG9iYWwoLmV4YW1wbGUtaW8pIHtcbiAgICBAYXBwbHkgZm9udC1tZW5sbyB0ZXh0LVswLjg1cmVtXTtcbiAgfVxuICBwcmU6Z2xvYmFsKC5leGFtcGxlLWlvKSB7XG4gICAgQGFwcGx5IG92ZXJmbG93LWF1dG8gd2hpdGVzcGFjZS1wcmU7XG4gIH1cbn1cblxuLmh0bWwgdGFibGUge1xuICBib3gtc2hhZG93OiAwIDAgMCAxcHggI2U1ZTVlNTtcbiAgQGFwcGx5IHRleHQtbGFiZWwtMSBtYi0zIHJvdW5kZWQtbGcgYm9yZGVyLWhpZGRlbjtcbn1cblxuOmdsb2JhbCguZGFyaykgLmh0bWwgdGFibGUge1xuICBib3gtc2hhZG93OiAwIDAgMCAxcHggIzQyNDI0MjtcbiAgQGFwcGx5IGJvcmRlci1kYXJrLWdyYXktNCB0ZXh0LWRhcmstbGFiZWwtMTtcbn1cblxuLmh0bWwgdGFibGUgdGgge1xuICBAYXBwbHkgYm9yZGVyLWdyYXktNCBiZy1maWxsLTMgYm9yZGVyLVsxcHhdIHB4LTIuNSBweS0yIGZvbnQtbWVkaXVtO1xufVxuXG4uaHRtbCB0YWJsZSB0aDpmaXJzdC1jaGlsZCB7XG4gIEBhcHBseSByb3VuZGVkLXRsLWxnO1xufVxuXG4uaHRtbCB0YWJsZSB0aDpsYXN0LWNoaWxkIHtcbiAgQGFwcGx5IHJvdW5kZWQtdHItbGc7XG59XG5cbjpnbG9iYWwoLmRhcmspIC5odG1sIHRhYmxlIHRoIHtcbiAgQGFwcGx5IGJvcmRlci1kYXJrLWdyYXktNCBiZy1kYXJrLWZpbGwtMztcbn1cblxuLmh0bWwgdGFibGUgdGQge1xuICBAYXBwbHkgYm9yZGVyLWdyYXktNCBib3JkZXItWzFweF0gcHgtMi41IHB5LTI7XG59XG5cbjpnbG9iYWwoLmRhcmspIC5odG1sIHRhYmxlIHRkIHtcbiAgQGFwcGx5IGJvcmRlci1kYXJrLWdyYXktNDtcbn1cblxuLmh0bWwgOmdsb2JhbCgubGFuZ3VhZ2UtbWQgLnRhYmxlKSB7XG4gIC8qXG4gICAgRklYTUU6IHRhaWx3aW5kLWNzcyBgLnRhYmxlYCBjb25mbGljdCB3aXRoIGhpZ2hsaWdodC5qcyBgLnRhYmxlYCxcbiAgICAgICAgICAgd2hpY2gganVzdCBoYXZlIGRpZmZlcmVudCBtZWFuaW5ncyBidXQgd2l0aCB0aGUgc2FtZSBuYW1lXG4gICAgICovXG4gIGRpc3BsYXk6IGlubGluZSAhaW1wb3J0YW50O1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+              `
+              document.body.appendChild(style)
+            })()
+      </script>
+      <script lang="javascript">
+        (() => {
+          const width = Number(localStorage.getItem('CONSOLE_SPLIT_LINE_HORIZONTAL')) || 50
+
+          const style = document.createElement('style')
+          style.className = 'qd-splitter-style'
+          style.innerHTML = `
+            .ssg__qd-splitter-primary-w {
+              width: calc(${width}% - 4px);
+            }
+            .ssg__qd-splitter-secondary-w {
+              width: calc(${100 - width}% - 4px);
+            }
+          `
+          document.body.appendChild(style)
+        })()
+      </script>
+      <script lang="javascript">
+        (() => {
+          const position = localStorage.getItem('QD_CONSOLE_PANEL_POSITION') || 'right'
+          const positionRight = position === 'right'
+          const classNameToHide = positionRight ? 'ssg__qd-console-position--left' : 'ssg__qd-console-position--right'
+
+          const style = document.createElement('style')
+          style.className = 'qd-console-style'
+          style.innerHTML = `
+            .${classNameToHide} {
+              display: none;
+            }
+          `
+          document.body.appendChild(style)
+        })()
+      </script>
+      <div class="hidden">
+        <div class="hidden">
+          <div class="swiper-autoheight"></div>
+          <div class="swiper-autoheight"></div>
+          <div class="gap-8"></div>
+          <div class="gap-8"></div>
+          <div class="gap-6"></div>
+          <div class="gap-6"></div>
+          <div class="pt-3"></div>
+          <div class="pt-3"></div>
+          <div class="space-y-1.5"></div>
+          <div class="space-y-1.5"></div>
+          <div role="rowgroup"></div>
+          <div role="rowgroup"></div>
+          <div role="table"></div>
+          <div role="table"></div>
+        </div>
+      </div>
+      <div
+        class="flex h-[100vh] min-w-[360px] flex-col overflow-x-auto text-label-1 dark:text-dark-label-1"
+      >
+        <div
+          class="h-[100vh] min-w-[1000px] bg-gray-2 dark:bg-dark-layer-bg"
+        ></div>
+      </div>
+      <div
+        role="region"
+        aria-label="Notifications (F8)"
+        tabindex="-1"
+        style="pointer-events: none"
+      >
+        <ol
+          tabindex="-1"
+          class="z-message pointer-events-none fixed left-0 top-0 flex max-h-screen w-full flex-col-reverse items-center gap-4 p-4"
+        ></ol>
+      </div>
+    </div>
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "props": {
+          "pageProps": {
+            "isRobotVisit": false,
+            "dehydratedState": { "mutations": [], "queries": [] },
+            "_nextI18Next": {
+              "initialI18nStore": {
+                "en": {
+                  "common": {
+                    "404": {
+                      "title": "Page Not Found - LeetCode",
+                      "pageNotFound": "Page Not Found",
+                      "message": "Sorry, but we can't find the page you are looking for..."
+                    },
+                    "meta": { "title": "", "description": "", "keywords": "" },
+                    "ok": "OK",
+                    "cancel": "Cancel",
+                    "confirm": "Confirm",
+                    "update": "Update",
+                    "submit": "Submit",
+                    "save": "Save",
+                    "netFailed": "Debugger failed to connect",
+                    "header": {
+                      "logo": { "url": "", "description": "" },
+                      "title": { "problemset-all": "" },
+                      "action": { "login": { "text": "", "url": "" } }
+                    },
+                    "conjunctions": { "and": "and", "or": "or" },
+                    "pages": {
+                      "leetcode": "LeetCode",
+                      "explore": "Explore",
+                      "problems": "Problems",
+                      "interview": {
+                        "interview": "Interview",
+                        "onlineInterview": "Online Interview",
+                        "assessment": "Assessment"
+                      },
+                      "contest": "Contest",
+                      "discuss": "Discuss",
+                      "store": {
+                        "store": "Store",
+                        "redeem": "Redeem",
+                        "premium": "Premium",
+                        "shop": "Micro-shop"
+                      },
+                      "admin": {
+                        "admin": "Admin",
+                        "library": "Library",
+                        "review": "Review",
+                        "operations": "User Management",
+                        "scores": "Points",
+                        "contribute": "Contribution",
+                        "backend": "Administration",
+                        "internalContest": "Internal Contest Dashboard",
+                        "contestDashboard": "Contest Dashboard",
+                        "contestAdmin": "Contest Cheating Dashboard",
+                        "emailBatch": "Email Batch",
+                        "dangerZone": "Danger Zone",
+                        "dbTestcase": "DB Testcase Converter",
+                        "tagManagement": "Tag Management",
+                        "questionFeedback": "Question Feedback"
+                      },
+                      "mobileApp": "Mobile App",
+                      "playground": "Playground",
+                      "signIn": "Sign in",
+                      "register": "Register",
+                      "signOut": "Sign Out"
+                    },
+                    "userMenu": {
+                      "renew": "Renew",
+                      "getPremium": "Access all features with our Premium subscription!",
+                      "orders": "Orders",
+                      "tryNewFeatures": "Try New Features",
+                      "translateQuestions": "Display problems in Chinese",
+                      "unmockUser": "Unmock User",
+                      "revertToOldVersion": "Revert to old version",
+                      "categories": {
+                        "myList": "My Lists",
+                        "notebook": "Notebook",
+                        "submissions": "Submissions",
+                        "session": "Session",
+                        "points": "Points",
+                        "progress": "Progress"
+                      },
+                      "appearance": "Appearance",
+                      "appearanceContent": {
+                        "auto": "System Default",
+                        "light": "Light",
+                        "dark": "Dark"
+                      }
+                    },
+                    "streakCounter": {
+                      "finished": "Well done! Come back for tomorrow's challenge!",
+                      "unfinished": "Solve today's Daily Challenge to refresh your streak!",
+                      "buyTimeTravelTicket": "Buy Time Travel Ticket",
+                      "missedOneDayThisMonth": "You missed 1 day this month. ",
+                      "missedDaysThisMonth": "You missed {{count}} days this month. "
+                    },
+                    "playground": {
+                      "playground": "Playground",
+                      "myPlaygrounds": "My Playgrounds",
+                      "remainingPlaygrounds": "Remaining",
+                      "renew": "Renew",
+                      "templates": {
+                        "consoleApplication": "Console Application",
+                        "empty": "New Playground",
+                        "frontend": "Frontend",
+                        "machineLearning": "Machine Learning"
+                      }
+                    },
+                    "links": {
+                      "premium": "/subscribe/",
+                      "discuss": "/discuss/",
+                      "assessment": "/assessment/",
+                      "shop": "https://detail.youzan.com/show/goods/newest?alias=271n43vr9hen7",
+                      "onlineInterview": "https://interview.leetcode.com/interview/",
+                      "profileArticles": "/submissions/",
+                      "orders": "/store/orders/",
+                      "tryNewFeatures": "/new/",
+                      "explore": "/explore/",
+                      "admin": {
+                        "scores": "/points/admin",
+                        "operations": "/user_management"
+                      },
+                      "playground": "/playground"
+                    },
+                    "pagination": { "perpage": "/ page" },
+                    "expand": "Expand",
+                    "collapse": "Collapse",
+                    "difficulty": {
+                      "easy": "Easy",
+                      "medium": "Medium",
+                      "hard": "Hard"
+                    },
+                    "easterEgg": {
+                      "rewardMessage": "Congratulations! You just found 10 LeetCoins. Happy LeetCoding!"
+                    },
+                    "markdown": { "heading": "heading", "quote": "Quote" },
+                    "mentions": { "users": "Users", "problems": "Problems" },
+                    "confirmModal": {
+                      "title": "Are you sure?",
+                      "confirmBtn": "Confirm",
+                      "cancelBtn": "Cancel"
+                    },
+                    "saving": "Saving...",
+                    "saved": "Saved",
+                    "autoSaved": "Save automatically",
+                    "loginRequired": "Sign in required",
+                    "verifiedRequired": "You need to verify your email",
+                    "phoneVerifiedRequired": "Your need to verify your phone",
+                    "maybeVerifiedRequired": "You need to verify your email",
+                    "dailyCheckIn": "+1 Daily Check-in",
+                    "copy": "Copy",
+                    "copyToEditor": "Copy To Editor",
+                    "copied": "Copied!",
+                    "copyLink": "Copy Link",
+                    "viewMore": "View more",
+                    "viewLess": "View less",
+                    "code": "Code",
+                    "survey": {
+                      "veryDissatisfied": "Very Dissatisfied",
+                      "verySatisfied": "Very Satisfied",
+                      "next": "Next",
+                      "continue": "Continue",
+                      "submit": "Submit",
+                      "questionNo": "Question {{current}} of {{total}}",
+                      "thanksMsg": "🎉 Thanks for your feedback!"
+                    },
+                    "qdNav": {
+                      "backTitle": "Problem List",
+                      "expandPanel": "Expand Panel",
+                      "preQuestion": "Prev Question",
+                      "nextQuestion": "Next Question",
+                      "pickOne": "Pick one",
+                      "openInNewTab": "Open in New Tab"
+                    },
+                    "premiumModal": {
+                      "learnMore": "Learn more",
+                      "subscribe": "Subscribe"
+                    },
+                    "truncatedContent": {
+                      "viewAll": "View all",
+                      "viewLess": "View less",
+                      "openRaw": "Open Raw",
+                      "showMore": "Show more",
+                      "showLess": "Show less"
+                    },
+                    "safariNotUse": "The current version of Safari is too low. For better experience, upgrade to the latest version",
+                    "account": {
+                      "emailVerifyModal": {
+                        "title": "Verify your account",
+                        "description": "Please verify your email address in order to use your account.",
+                        "verify": "Verify",
+                        "cancel": "Cancel"
+                      }
+                    },
+                    "medal": {
+                      "metadataTitle": "Badge - LeetCode",
+                      "congratulation": "Congratulations",
+                      "genPoster": "Generate Image",
+                      "genPostering": "Generating",
+                      "saveImgMobile": "Long press to save the image",
+                      "saveImgPc": "Right-click to save the image",
+                      "medalEmpty": "Sorry, there are no medals to grab right now."
+                    }
+                  },
+                  "problems": {
+                    "meta": {
+                      "title": "{{title}} - LeetCode",
+                      "description": "Can you solve this real interview question? {{title}} - {{content}}",
+                      "ogImage": "https://leetcode.com/static/images/LeetCode_Sharing.png",
+                      "defaultDescription": "Level up your coding skills and quickly land a job. This is the best place to expand your knowledge and get prepared for your next interview."
+                    },
+                    "tabs": {
+                      "description": "Description",
+                      "editorial": "Editorial",
+                      "discussion": "Discussion",
+                      "solutions": "Solutions",
+                      "submissions": "Submissions",
+                      "submissionOverview": "Submission Overview",
+                      "code": "Code",
+                      "testcase": "Testcase",
+                      "result": "Test Result",
+                      "debugger": "Debugger",
+                      "settings": "Settings",
+                      "note": "Note",
+                      "guide": "Guide",
+                      "preview": "Preview",
+                      "previewConsole": "Web Console",
+                      "rawText": "Raw Text",
+                      "previewCode": "Preview Code",
+                      "resultDiff": "Diff",
+                      "disabledTooltips": {
+                        "editorial": "Editorial is not available for this question."
+                      }
+                    },
+                    "lockedQuestion": {
+                      "subscribeToUnlock": "Subscribe to unlock.",
+                      "subscribeToUnlockMessage": "Thanks for using LeetCode! To view this question you must subscribe to premium.",
+                      "subscribe": "Subscribe"
+                    },
+                    "unsupportedFeature": {
+                      "upgradeToIdeTitle": "Upgrade to Dynamic Layout",
+                      "signInToTryOut": "Sign In to Try Out",
+                      "tryOut": "Try Out",
+                      "features": {
+                        "frontendQuestion": "New frontend questions are exclusively available in Dynamic Layout. Switch to this format for a more immersive LeetCode experience and access to these questions."
+                      }
+                    },
+                    "feedback": {
+                      "feedback": "Feedback",
+                      "revertToOld": "Revert to last version"
+                    },
+                    "satisfactionSurvey": { "submitBtnText": "Get LeetCoins" },
+                    "panel": {
+                      "recommend": "Recommend",
+                      "description": "Recent hot questions we've picked for you."
+                    },
+                    "dynamicLayout": {
+                      "maximize": "Maximize",
+                      "exit": "Exit",
+                      "foldPanel": "Fold",
+                      "unFoldPanel": "Unfold",
+                      "moveTabset": "{{name}} and {{count}} tabs",
+                      "disabledUnFold": "Reset not supported under current layout. Please resize with splitter.",
+                      "layoutManager": {
+                        "hints": "Hints",
+                        "layouts": "Layouts",
+                        "featureTitle": "Layout gets messy?",
+                        "featureContent": "One-click reset is now available! You can even save a specific layout as a template for future use.",
+                        "gotIt": "Got it",
+                        "tryNow": "Try now",
+                        "featureInfo": "Create and manage all your custom layouts from here.",
+                        "default": "Default",
+                        "note": "Note-taking",
+                        "debug": "Debug",
+                        "saveCurrentLayout": "Save Current Layout",
+                        "saveNewLayout": "Save New Layout",
+                        "nameYourLayout": "Name current layout",
+                        "temporaryTabs": "Temporary Tabs",
+                        "temporaryTabsWarningBefore": "",
+                        "temporaryTabsWarningAfter": " will not be saved in custom layout.",
+                        "temporaryTabsContent": "Temporary visible tabs can only be accessed in specific question, which includes tabs like: solutions details and submissions details.",
+                        "cancel": "Cancel",
+                        "save": "Save",
+                        "layoutSaved": "Layout saved",
+                        "layoutDeleted": "Layout deleted",
+                        "upgradeToSaveFirst": "Upgrade to turn on",
+                        "upgradeToSaveSecond": "custom layouts",
+                        "subscribe": "Subscribe",
+                        "apply": "Apply",
+                        "upgradeToApply": "Upgrade to premium to unlock this layout",
+                        "delete": "Delete",
+                        "deleteTitle": "Delete \"{{name}}\"?",
+                        "deleteContent": "This layout will be permanently deleted and will be unrecoverable.",
+                        "no": "No",
+                        "edit": "Edit",
+                        "editLayout": "Edit Layout",
+                        "updateToCurrentLayout": "Update to Current Layout"
+                      },
+                      "featureModal": {
+                        "dynamicLayout": "Dynamic Layout",
+                        "title": "Upgrade to Dynamic Layout",
+                        "content": "Enjoy the enhanced flexibility and immerse yourself in the coding environment offered by LeetCode's upgraded Dynamic Layout.",
+                        "tryOut": "Try Out"
+                      },
+                      "settingRunSubmitPopover": {
+                        "title": "Customize Dynamic Toolbar?",
+                        "content": "You can now move Run, Submit and Debug buttons to Code Editor.",
+                        "buttonText": "Go to Settings"
+                      }
+                    },
+                    "settings": {
+                      "settings": "Settings",
+                      "lab": "Lab",
+                      "premium": "Premium",
+                      "layout": {
+                        "categoryTitle": "Dynamic Layout",
+                        "resetToDefaultLayout": "Default layout",
+                        "reset": "Reset",
+                        "runSubmitPosition": "Show Run / Submit / Debug buttons in",
+                        "toolbar": "ToolBar",
+                        "code-editor": "Code Editor",
+                        "revertToSplitViewMode": "Revert to Split View mode"
+                      },
+                      "editor": {
+                        "categoryTitle": "Code Editor",
+                        "fontSize": "Font size",
+                        "keyBinding": "Key binding",
+                        "keyBindingVim": "Vim",
+                        "keyBindingEmacs": "Emacs",
+                        "keyBindingStandard": "Standard",
+                        "tabSize": "Tab size",
+                        "spaces": "{{count}} spaces",
+                        "wordWrap": "Word Wrap"
+                      },
+                      "shortcuts": {
+                        "categoryTitle": "Shortcuts",
+                        "or": "or",
+                        "general": "General",
+                        "runCode": "Run code",
+                        "submit": "Submit",
+                        "closeTab": "Close tab",
+                        "maximizePanel": "Maximize / Exit Maximize Panel",
+                        "fullScreen": "Enter / Exit Full Screen",
+                        "debug": "Debug",
+                        "debugStart": "Start Debugging",
+                        "debugStop": "Stop Debugging",
+                        "debugSkipForward": "Skip Forward",
+                        "debugStepOver": "Step over",
+                        "debugStepIn": "Step in",
+                        "debugStepOut": "Step out",
+                        "debugRestart": "Restart",
+                        "codeEditor": "Code Editor",
+                        "editorIndent": "To indent one level",
+                        "editorIndentFew": "To indent one fewer levels",
+                        "editorMoveLines": "To move lines up / down",
+                        "editorCut": "Delete line and copy to buffer",
+                        "editorToggleComment": "Comment / uncomment current selection",
+                        "editorUndo": "Undo action",
+                        "editorRedo": "Redo action"
+                      },
+                      "advanced": {
+                        "categoryTitle": "Advanced",
+                        "premiumTitle": "LeetCode Premium",
+                        "premiumDesc": "Customize your learning experience within Dynamic Layout through LeetCode Premium.",
+                        "learnMore": "Learn more",
+                        "realTimeResizing": "Real-time resizing",
+                        "realTimeResizingDesc": "Display content responds to panel resizing. Disable if you experiencing graphic performance issues.",
+                        "multipleTab": "Open multiple instance in new tab",
+                        "multipleTabDesc": "Elements from lists (solutions, submissions, etc.) can be opened in new tabs. Allowing multiple tabs to be opened at once.",
+                        "openAfterActive": "Open in active panels",
+                        "openAfterSimilar": "Open after last position of similar tabs",
+                        "customLayout": "Save custom layout (cloud)",
+                        "customLayoutDesc": "Premium users can store up-to 3 customized layout.",
+                        "upgrade": "Upgrade",
+                        "view": "View",
+                        "multipleTabUpdateAlert": {
+                          "title": "Update Settings?",
+                          "desc": "Update this setting will automatically close all the solutions and submissions opened. Are you sure you want to update settings?",
+                          "no": "No",
+                          "update": "Update"
+                        }
+                      }
+                    },
+                    "preview": {
+                      "goBackTooltip": "Go back",
+                      "goForwardTooltip": "Go forward",
+                      "refreshTooltip": "Refresh",
+                      "openInNewTabTooltip": "Open in new tab",
+                      "upgradeToGetUrl": "Upgrade to premium to see link"
+                    },
+                    "previewConsole": {
+                      "isEmpty": "Console is empty",
+                      "clearTooltip": "Clear console",
+                      "clearedAt": "Console cleared at {{time}}"
+                    },
+                    "ideGuide": {
+                      "introIdeTitle": "Introducing Dynamic Layout",
+                      "new": "NEW",
+                      "introInfo": "Unleash your potential with the immersive and flexible coding environment",
+                      "setTitle": "Show Run \u0026 Submit buttons in",
+                      "setTip": "You can change the preference at any time in the settings",
+                      "enableIde": "Enable Dynamic Layout",
+                      "of": " of ",
+                      "skipTour": "Skip tour",
+                      "back": "Back",
+                      "next": "Next",
+                      "done": "Done",
+                      "toolbarTitle": "Toolbar",
+                      "toolbarContent": "A central hub for key tools such as Run Code, Submit, Notes, etc.",
+                      "tabsTitle": "Tabs",
+                      "tabsContent": "Customize your coding space by dragging tabs to create preferred layouts.",
+                      "resizeTitle": "Resize Panels",
+                      "resizeContent": "Adjust the workspace to fit your needs by resizing panes using the splitter.",
+                      "maximizeTitle": "Maximize a Panel",
+                      "maximizeContent": "Double-click the top bar of a pane to maximize and enhance focus.",
+                      "expandCollapseTitle": "Expand / Collapse",
+                      "expandCollapseContent": "Click to expand or collapse a pane, creating space for essential content.",
+                      "settingsTitle": "Settings",
+                      "settingsContent": "Customize for Dynamic Layout, Code Editor, Shortcuts and Advanced Settings.",
+                      "maybeLater": "Maybe later"
+                    },
+                    "contest": {
+                      "toolbar": {
+                        "userAcceptedShort": "Users AC",
+                        "userAccepted": "Users Accepted",
+                        "userTriedShort": "Users",
+                        "userTried": "Users Tried",
+                        "totalAcceptedShort": "Total AC",
+                        "totalAccepted": "Total Accepted",
+                        "totalSubmissionsShort": "Submissions",
+                        "totalSubmissions": "Total Submissions"
+                      },
+                      "navbar": { "classicMode": "Classic Mode" }
+                    }
+                  },
+                  "console": {
+                    "meta": { "title": "Question Detail" },
+                    "console": "Console",
+                    "run": "Run",
+                    "to": "to",
+                    "or": "or",
+                    "submit": "Submit",
+                    "execute": "Execute",
+                    "resetTestcases": "Reset Testcases",
+                    "debug": "Debug",
+                    "testcase": "Testcase",
+                    "testcaseCount": "{{ count }}/{{ max }} testcases",
+                    "debugger": "Debugger",
+                    "testcaseNumber": "Case {{ number }}",
+                    "cloneCurrentTestcase": "Clone current testcase",
+                    "switchToRawEditor": "Use raw testcase editor",
+                    "switchToTabEditor": "Use tab-based testcase editor",
+                    "switchConsoleToLeft": "Move console to the left side of the page",
+                    "switchConsoleToRight": "Move console to the right side of the page",
+                    "testcasePlaceholder": "Enter Testcase",
+                    "shellTestcaseBlocker": "You don’t need to set testcases for Shell problems.",
+                    "showFullTree": "Click to view the entire tree",
+                    "fullTreeTooBig": "Data is too large to display",
+                    "sourceMode": "Source Mode",
+                    "sourceModeText": "You can now edit all your testcases in one text editor.",
+                    "noThanks": "No thanks",
+                    "tryNow": "Try now",
+                    "inconsistentResults": "Getting inconsistent results?",
+                    "inconsistentResultsContent": "You might be using global/static variables or C/C++. The system executes all testcases using the same program instance. Global/static variables affect the program state from one test case to another.",
+                    "gotIt": "Got it",
+                    "readMore": "Read more",
+                    "result": {
+                      "result": "Result",
+                      "stdout": "Stdout",
+                      "noResult": "You must run your code first",
+                      "notAvailable": "Not available.",
+                      "slowdown": {
+                        "premium": "You have attempted to run code too soon. Please try again in a few seconds.",
+                        "first": "You have attempted to run code too soon. Please try again in a few seconds, or",
+                        "second": "Subscribe",
+                        "third": "to reduce wait time."
+                      },
+                      "networkError": "Unknown network error. Please try reloading page.",
+                      "serverError": "Unknown server error. Please contact our support team.",
+                      "unknownError": "Something went wrong",
+                      "compileError": "Compile Error",
+                      "runtimeError": "Runtime Error",
+                      "copyCompileError": "Copy error message to clipboard",
+                      "copyContent": "Copy content to clipboard",
+                      "copied": "Successfully copied to clipboard!",
+                      "viewAll": "View all",
+                      "viewLess": "View less",
+                      "outputLimitExceeded": "Output Limit Exceeded",
+                      "timeLimitExceeded": "Time Limit Exceeded",
+                      "memoryLimitExceeded": "Memory Limit Exceeded",
+                      "timeout": "Server Request Timeout",
+                      "internalError": "Internal Error",
+                      "accepted": "Accepted",
+                      "finished": "Finished",
+                      "wrongAnswer": "Wrong Answer",
+                      "invalidTestcase": "Invalid Testcase",
+                      "runtime": "Runtime",
+                      "input": "Input",
+                      "output": "Output",
+                      "expected": "Expected",
+                      "contribution": "Contribute a testcase",
+                      "pending": "Pending...",
+                      "premiumPending": "Pending...",
+                      "judging": "Judging...",
+                      "debugging": "Debugging...",
+                      "speedUp": "Speed Up",
+                      "lastExecutedInput": "Last Executed Input",
+                      "openTestcase": "Open Testcase",
+                      "testcasesPassed": "testcases passed",
+                      "useTestcaseAsInput": "Use Testcase",
+                      "addedTestcaseMessage": "Successfully added the test",
+                      "testcaseExistsMessage": "Test already exists in editor",
+                      "testPassedButTookTooLong": "Testcases passed, but took too long.",
+                      "cantUseTestcaseAsInput": "Max # of testcases reached",
+                      "maxTestcaseCountReached": "Max of {{ count }} testcases reached",
+                      "debugger": "Debugger",
+                      "moreLine_one": "more line",
+                      "moreLine_other": "more lines",
+                      "edit": "Edit"
+                    },
+                    "ai": {
+                      "title": "LeetWiz",
+                      "beta": "Beta",
+                      "analyzingCode": "Analyzing code...",
+                      "codeErrorHint": "Why am I getting this error?",
+                      "fullName": "LeetWiz - Your AI helper",
+                      "shortName": "LeetWiz",
+                      "description": "Need some help? Try out our new AI assistant, LeetWiz! LeetWiz helps you progress and stay focused on what is important. It will help you identify the cause of runtime/compile errors and provide hints to help you fix them.",
+                      "fixedError": "You seem to have fixed your runtime/compile error. Keep in mind I only support helping with runtime errors or compile errors for now 😊",
+                      "morePremiumFeatures": "More premium features"
+                    },
+                    "info": {
+                      "info": "Info",
+                      "content": "\u003c0\u003eAre 'Run' results inconsistent with 'Submit' results? If you are using global/static variables or C/C++, please check\u003c/0\u003e \u003c1\u003ethis\u003c/1\u003e \u003c0\u003eout.\u003c/0\u003e",
+                      "ok": "Okay",
+                      "howToCreateBinaryTreeTestcases": "How to create binary tree testcases",
+                      "howToCreateDatabaseTestcases": "How to create database testcases"
+                    },
+                    "visualizer": {
+                      "dataTooLarge": "Data too large to be displayed, input would be truncated.",
+                      "parseFailed": "Failed to parse your input, please check again.",
+                      "dataNotSupported": "This doesn't support visualization.",
+                      "outputDataTypeNotSupported": "Output data type doesn't support visualization",
+                      "initFailed": "Failed to init the canvas, please refresh the page and try again."
+                    },
+                    "verifyEmail": "verify email",
+                    "nonVerifyMsg": "Please verify email to run your code",
+                    "signToRunOrSubmit": "You need to Login/Sign up to {{action}}",
+                    "signToRunAndSubmit": "You need to \u003c0\u003eLogin / Sign up\u003c/0\u003e to run or submit",
+                    "verifyToRunAndSubmit": "You need to \u003c0\u003everify email\u003c/0\u003e to execute or submit your code",
+                    "notAvailableDuringDebugging": "Not available during debugging",
+                    "notAvailableDuringExecuting": "Not available during executing",
+                    "frontendTestcases": {
+                      "reset": "Reset",
+                      "lnCol": "Ln {{lineNumber}}, Col {{column}}",
+                      "guideTooltip": "Testcase Guide",
+                      "guideTitle": "Testcase Guide"
+                    }
+                  },
+                  "code-editor": {
+                    "commonConfirmTitle": "Are you sure?",
+                    "fullScreen": "Full screen",
+                    "exitFullScreen": "Exit full screen",
+                    "autocomplete": {
+                      "button": "Auto",
+                      "lspTooltip": "Intelligent code completion based on static code analysis.",
+                      "basicTooltip": "Basic code completion.",
+                      "basicWithLspError": "Basic code completion. Double-click to retry intelligent code completion.",
+                      "lspConnectionError": "Intelligent code complete connection failed",
+                      "lspNotSupportedTooltip": "The language is not supported by our platform",
+                      "needToLoginTooltip": "Login to use autocomplete",
+                      "notPremiumTooltip": "Upgrade to premium to use autocomplete"
+                    },
+                    "langInfo": "Language Information",
+                    "settings": {
+                      "name": "Settings",
+                      "fontSize": "Font size",
+                      "fontSizeDesc": "Choose your preferred font size for the code editor.",
+                      "theme": "Theme",
+                      "themeDesc": "Tired of the white background? Try different styles and syntax highlighting.",
+                      "themeDark": "Dark",
+                      "themeLight": "Light",
+                      "themeSystem": "System",
+                      "keyBinding": "Key binding",
+                      "keyBindingDesc": "Want to practice Vim or Emacs? We have these key binding options available for you.",
+                      "keyBindingVim": "Vim",
+                      "keyBindingEmacs": "Emacs",
+                      "keyBindingStandard": "Standard",
+                      "tabSize": "Tab size",
+                      "tabSizeDesc": "Choose the width of a tab character.",
+                      "spaces": "{{count}} spaces",
+                      "wordWrap": "Word Wrap"
+                    },
+                    "shortcuts": {
+                      "name": "Editor Shortcuts",
+                      "run": "Run code",
+                      "submit": "Submit",
+                      "debug": "Debug code",
+                      "indent": "To indent one level",
+                      "indentFew": "To indent one fewer levels",
+                      "moveLines": "To move lines up/down",
+                      "cut": "Delete line and copy to buffer",
+                      "toggleComment": "Comment/uncomment current selection",
+                      "undo": "Undo action",
+                      "redo": "Redo action",
+                      "note": "Note"
+                    },
+                    "reset": {
+                      "tip": "Reset to default code definition",
+                      "confirmContent": "Your current code will be discarded and reset to the default code!",
+                      "resetServer": "Continue to work on your code from {{time}}",
+                      "restore": "Restore"
+                    },
+                    "history": {
+                      "title": "{{lang}} Submission Notes",
+                      "tip": "Submission Notes",
+                      "description": "Only the code submitted in the current language will be displayed; When you select and confirm the selection, your current code will be overwritten by the code you selected.",
+                      "status": "Status",
+                      "runtime": "Runtime",
+                      "memory": "Memory",
+                      "time": "Time",
+                      "topic": "Topic",
+                      "notes": "Notes",
+                      "noNotes": "You haven't added notes to any submissions yet!"
+                    },
+                    "timer": {
+                      "start": "Start timer",
+                      "hide": "Hide timer",
+                      "show": "Show timer",
+                      "reset": "Reset timer",
+                      "pause": "Pause",
+                      "continue": "Continue",
+                      "contest": {
+                        "penaltyTimeDescription": "Penalty time: 5 min for each wrong submission"
+                      }
+                    },
+                    "debugger": {
+                      "loginToDebug": "You need to Login / Sign up to debug",
+                      "name": "Debugger",
+                      "stdout": "Standard output",
+                      "input": "Input",
+                      "enterTip": "Click on line number to add breakpoints",
+                      "exit": "Exit",
+                      "start": "Start Debug",
+                      "stop": "Stop Debug",
+                      "startShort": "Debug",
+                      "stopShort": "Stop",
+                      "watch": "Watch Expressions",
+                      "local": "Local Variables",
+                      "watchHolder": "Please enter the watch expressions value",
+                      "controlStart": "Start Debug",
+                      "controlForward": "Skip forward",
+                      "controlStepOver": "Step over",
+                      "controlStepOut": "Step out",
+                      "controlStepIn": "Step in",
+                      "controlReset": "Restart",
+                      "exited": "Debugger session exited, terminate it?",
+                      "startToWatch": "Start debugging session to see watch expressions",
+                      "watchTip": "You need to Start debugging to add value",
+                      "startViewVars": "Start debugging session to see local variables",
+                      "noVars": "No local variables detected",
+                      "startViewOutput": "Start the debugging session to check output here",
+                      "noOutput": "No output yet...",
+                      "edited": "Code has been modified, please restart the debugger",
+                      "cantAddTestcase": "You have reached maximum number of testcases",
+                      "langNotSupported": "{{lang}} doesn't support debugger",
+                      "expressionsNotSupported": "{{lang}} not supported",
+                      "notPremium": "Upgrade to premium to use debugger",
+                      "oneClickDebug": "One Click Debug"
+                    },
+                    "markDownPlaceholder": "Type here...(Markdown is enabled)",
+                    "retrieveCode": {
+                      "tip": "Retrieve last submitted code",
+                      "confirmContent": "Your code will be discarded and replaced with your last submission's code!",
+                      "noData": "You haven't submitted any code!"
+                    },
+                    "editor-position": "Ln {{lineNumber}}, Col {{column}}",
+                    "framework": {
+                      "switchTooltip": "Switch framework",
+                      "modalTitle": "Select Framework",
+                      "modalDescription": "Choose your preferred framework to start with.",
+                      "modalConfirmTitle": "Confirm switching framework",
+                      "modalConfirmText": "Changing the framework will reset the unsubmitted code. Are you sure you want to proceed?",
+                      "modalConfirmBtn": "Proceed",
+                      "toastSwitchSuccess": "Description has been updated for the {{framework}}.",
+                      "guide": {
+                        "selectFramework": "Select Framework",
+                        "selectFrameworkDescription": "You can switch to your desired framework from here.",
+                        "selectFrameworkConfirm": "Got it"
+                      }
+                    },
+                    "saveCode": {
+                      "restoredFromCloud": "Restored from Cloud",
+                      "restoredFromLocal": "Restored from local",
+                      "upgradeToCloud": "Upgrade to Cloud Saving",
+                      "savedToCloudToast": "All changes are automatically saved to cloud for Premium user.",
+                      "savedToLocalToastFirst": "Your code is saved to local, ",
+                      "savedToLocalToastSecond": " to enable cloud saving.",
+                      "upgradeToPremium": "upgrade to Premium",
+                      "savedToCloud": "Saved",
+                      "savedToLocal": "Saved",
+                      "saving": "Saving..."
+                    },
+                    "format": {
+                      "tip": "Format Code",
+                      "formatted": "Formatted!"
+                    },
+                    "exceedMaxLineLength": "For performance reasons, the number of characters per line is limited to 10,000."
+                  },
+                  "description": {
+                    "status": { "tried": "Attempted", "ac": "Solved" },
+                    "ok": "OK",
+                    "somethingWentWrong": "Something went wrong",
+                    "thanksForVoting": "Thanks for voting!",
+                    "topics": "Topics",
+                    "companies": "Companies",
+                    "pastSixMonths": "0 - 6 months",
+                    "pastYear": "6 months - 1 year",
+                    "pastTwoYears": "1 year - 2 years",
+                    "hint": "Hint",
+                    "showHints": "Show Hints",
+                    "moreActions": "More Actions",
+                    "feedback": "Feedback",
+                    "showEnglish": "Show English Translation",
+                    "showChinese": "Show Chinese Translation",
+                    "addToListError": "Something went wrong. Please try again.",
+                    "feedbackForm": {
+                      "optionRequiredError": "Please select at least one option.",
+                      "title": "Feedback",
+                      "alternative": "You may also \u003c0\u003esubmit via Github\u003c/0\u003e to get feedback in real time.",
+                      "cancel": "Cancel",
+                      "submit": "Submit",
+                      "issuesEncountered": "Issues Encountered",
+                      "problem": "Problem",
+                      "additionalFeedback": "Additional Feedback",
+                      "description": "We try to keep our questions to the highest quality possible. Could you please tell us why you disliked this question?",
+                      "somethingWentWrong": "Something went wrong",
+                      "options": {
+                        "unclearDescription": "Description or examples are unclear or incorrect",
+                        "unclearDifficulty": "Difficulty is inaccurate",
+                        "unclearTestCases": "Testcases are missing or incorrect",
+                        "runtimeStrict": "Runtime is too strict",
+                        "edgeCases": "Edge cases are too frustrating to solve",
+                        "other": "Other",
+                        "otherPlaceholder": "Additional feedback"
+                      }
+                    },
+                    "accepted": "Accepted",
+                    "submissions": "Submissions",
+                    "acRate": "Acceptance Rate",
+                    "copyright": "Copyright ©️ {{year}} LeetCode All rights reserved",
+                    "yes": "Yes",
+                    "no": "No",
+                    "add2": "Add",
+                    "seenBefore": "Seen this question in a real interview before?",
+                    "whichCompany": "Which Company?",
+                    "whichPosition": "which Position?",
+                    "whichTimePeriod": "When did you encounter this question?",
+                    "whichStage": "Which interview stage?",
+                    "thanksForFeedback": "🎉 Thank you for your feedback!",
+                    "relatedTopics": "Related Topics",
+                    "add": "Add",
+                    "remove": "Remove",
+                    "createNewList": "Create a new list",
+                    "nameListPlaceholder": "Enter a list name",
+                    "cancel": "Cancel",
+                    "save": "Save",
+                    "setAsPrivate": "Set as Private",
+                    "addToList": "Add to List",
+                    "sqlSchema": "SQL Schema",
+                    "pandasSchema": "Pandas Schema",
+                    "confirm": "Confirm",
+                    "favoriteSignInError": "Sign in to access your lists",
+                    "feedbackSignInError": "Sign in to give feedback",
+                    "likeSignInError": "Sign in to like or dislike this question",
+                    "schemaCopySuccess": "Successfully copied to clipboard",
+                    "shareQuestionDescription": "Check out this coding interview problem on LeetCode!",
+                    "viewMyLists": "View my Lists",
+                    "searchPlaceholder": "Search...",
+                    "similarQuestions": "Similar Questions",
+                    "discussion": "Discussion ({{commentCount}})"
+                  },
+                  "submissions": {
+                    "runtime": "Runtime",
+                    "memory": "Memory",
+                    "beat": "Beats",
+                    "noData": "No data",
+                    "noSubmission": "Submission does not exist",
+                    "noCode": "There is no code here",
+                    "copied": "Copied",
+                    "pending": "Pending...",
+                    "testPassedButTookTooLong": "Testcases passed, but took too long.",
+                    "submittedAt": "submitted at",
+                    "fullCode": "Full Code",
+                    "allSubmissions": "All Submissions",
+                    "success": {
+                      "accept": "Accepted",
+                      "timeTaken": "Time taken: {{time}}",
+                      "nextQuestion": "Next question",
+                      "moreChallenges": "More challenges",
+                      "second_short": "s",
+                      "minute_short": "m",
+                      "hour_one": "hr",
+                      "hour_other": "hrs",
+                      "solution": "Solution",
+                      "beatsPercentage": "Beats {{percent}}%",
+                      "ofUsersWithLanguage": "of users with {{language}}"
+                    },
+                    "details": {
+                      "myCode": "My Submitted Code",
+                      "otherCode": "My Submitted Code",
+                      "sampleCode": "Sample {{metric}} submission",
+                      "backToMyCode": "Back to my position",
+                      "chartHintForAction": "Click on the chart to check sample codes",
+                      "fetchingCodeFromServer": "Fetching code from server..."
+                    },
+                    "buttons": {
+                      "close": "Close",
+                      "details": "Details",
+                      "solution": "Solution"
+                    },
+                    "filters": {
+                      "allStatuses": "All statuses",
+                      "allLanguages": "All languages",
+                      "status": "Status",
+                      "language": "Language",
+                      "framework": "Framework",
+                      "time": "Time",
+                      "runtime": "Runtime",
+                      "memory": "Memory",
+                      "notes": "Notes",
+                      "penaltyTime": "Penalty Time",
+                      "minute": "Min"
+                    },
+                    "notes": {
+                      "label": "Notes",
+                      "placeholder": "Write your notes here"
+                    },
+                    "relatedTags": {
+                      "label": "Related Tags",
+                      "placeholder": "Select related tags",
+                      "startTyping": "Start typing to find a tag",
+                      "noResults": "No tags found"
+                    },
+                    "chart": {
+                      "runtimeDescription": "Accepted Solutions Runtime Distribution (%)",
+                      "memoryDescription": "Accepted Solutions Memory Distribution (%)",
+                      "runtimeShortDescription": "Distribution (%)",
+                      "memoryShortDescription": "Distribution (%)",
+                      "youAreHere": "You are here!",
+                      "hintForAction": "Click the distribution chart to view more details",
+                      "runtime": "Runtime",
+                      "memory": "Memory",
+                      "percentLabel": "{{percent}}% of solutions used",
+                      "runtimeValueLabel": "{{value}} ms of runtime",
+                      "memoryValueLabel": "{{value}} MB of memory",
+                      "noData": "Sorry, there are not enough accepted submissions to show data",
+                      "codeSample": "Code Sample",
+                      "runtimeCodeSampleInfo": "Runtime: {{value}}ms",
+                      "memoryCodeSampleInfo": "Memory: {{value}}mb",
+                      "resetZoom": "Click on the minimap to reset"
+                    },
+                    "nonSignedIn": {
+                      "signInTitle": "🔥 Join LeetCode to Code!",
+                      "signInInfo": "View your Submission records here",
+                      "signInButton": "Register or Sign In"
+                    },
+                    "failedSubmission": {
+                      "runtimeError": "Runtime Error",
+                      "compileError": "Compile Error",
+                      "lastTestcase": "Last Executed Input"
+                    },
+                    "submissionPreview": {
+                      "embedCode": "Embed Code",
+                      "copyEmbedCode": "Copy",
+                      "copiedEmbedCode": "Copied!",
+                      "copyEmbedCodeTooltip": "Copy embed code",
+                      "copyLinkTooltip": "Copy link",
+                      "openInNewTabTooltip": "Open in new tab",
+                      "openInPanelTooltip": "Open in panel",
+                      "maximizeTooltip": "Maximize",
+                      "minimizeTooltip": "Minimize",
+                      "invalidSubmissionIdLabel": "Invalid Submission ID",
+                      "missingSubmissionIdTooltip": "Please enter a Submission ID",
+                      "nonFeSubmissionIdTooltip": "Please enter a Frontend Question Submission ID",
+                      "openIn": "Open in"
+                    }
+                  },
+                  "feature-guide": {
+                    "layout": "Drag the divider to resize the window based on your preference!",
+                    "timer": "\u003c0\u003eTimer:\u003c/0\u003e Use the new timer feature to record how much time you spend solving a question!",
+                    "debugger": "\u003c0\u003eDebugger:\u003c/0\u003e Use the debugger feature to make debugging easy peasy.",
+                    "problemSwitch": "Quickly navigate to the \u003c0\u003eprevious/next question\u003c/0\u003e here",
+                    "problemList": "Quickly navigate to the \u003c0\u003eprevious page\u003c/0\u003e here",
+                    "discussion": "Post any ideas in the \u003c0\u003eDiscussion\u003c/0\u003e. If you want to share a solution, share it under the solution tab!",
+                    "solution": "Share your solution with other users, and find LeetCode's official solution alongside other users' solutions here.",
+                    "back": "Back",
+                    "skip": "Skip",
+                    "next": "Next",
+                    "ok": "OK",
+                    "title": "🎉 Introducing our new question page!"
+                  },
+                  "feature-guide-dynamic": {
+                    "back": "Back",
+                    "skip": "Skip",
+                    "next": "Next",
+                    "explore": "Explore",
+                    "step1": {
+                      "title": "Introducing Dynamic Layout",
+                      "des": "Enjoy the enhanced flexibility and immerse yourself in the coding environment offered by LeetCode's upgraded Dynamic Layout.",
+                      "tip": ""
+                    },
+                    "step2": {
+                      "title": "Move",
+                      "des": "Drag tabs/panes to create your custom coding layout effortlessly.",
+                      "tip": ""
+                    },
+                    "step3": {
+                      "title": "Resize",
+                      "des": "Grab the splitter between panes to resize them, tailoring the workspace to your preferences.",
+                      "tip": ""
+                    },
+                    "step4": {
+                      "title": "Maximize",
+                      "des": "Maximizing a panel by double-clicking its top, enhancing your coding immersion.",
+                      "tip": ""
+                    },
+                    "step5": {
+                      "title": "New Toolbar",
+                      "des": "The toolbar: your hub for notes, timer, debugger, run code and submit.",
+                      "tip": ""
+                    }
+                  },
+                  "solutions": {
+                    "filter": {
+                      "searchPlaceholder": "Search...",
+                      "tags": { "all": "All", "mySolution": "My Solution" },
+                      "sortBy": {
+                        "placeholder": "Sort by",
+                        "hot": "Hot",
+                        "most_posts": "Most Posts",
+                        "most_relevant": "Most Relevant",
+                        "most_votes": "Most Votes",
+                        "newest_to_oldest": "Most Recent",
+                        "oldest_to_newest": "Oldest to Newest",
+                        "recent_activity": "Recent Activity",
+                        "hot_short": "Hot",
+                        "newest_to_oldest_short": "Recent",
+                        "most_votes_short": "Votes",
+                        "most_relevant_short": "Relevant"
+                      }
+                    },
+                    "solution": "Solution",
+                    "writeSolution": "Solution",
+                    "continueSolution": "Solution",
+                    "videoSolutionTooltip": "Video Solution",
+                    "premiumOnlyTooltip": "Premium Solution",
+                    "tags": {
+                      "official": "Official",
+                      "pinned": "Pinned",
+                      "favorite": "My Favorite",
+                      "mySolution": "My Solution",
+                      "hidden": "Hidden"
+                    },
+                    "post": {
+                      "invalidSolutionTitle": "Unable to load the solution",
+                      "invalidSolutionDescription": "Please try exploring other solutions",
+                      "prevLabel": "Previous",
+                      "nextLabel": "Next",
+                      "isAdmin": "Admin",
+                      "reputationTooltip": "Reputation",
+                      "share": "Share",
+                      "addToCollection": "Favorite",
+                      "isInCollection": "Favorite",
+                      "votes": "({{votesCount}} votes)",
+                      "shareCopySuccess": "Copied link to clipboard",
+                      "addToFavoriteSuccess": "Added to favorite solutions",
+                      "removeFromFavoriteSuccess": "Removed from favorite solutions",
+                      "feedbackTooltip": "Feedback",
+                      "backToTop": "Back to top",
+                      "genericError": "Something went wrong",
+                      "signInVoteError": "You must sign in to vote",
+                      "verifyVoteError": "You must verify your email to vote",
+                      "rateSuccess": "Thanks for rating this solution!",
+                      "upvote": "Upvote",
+                      "comments": "Comments",
+                      "allSolutions": "All Solutions",
+                      "more": {
+                        "error": "Something went wrong",
+                        "cancel": "Cancel",
+                        "edit": "Edit",
+                        "subscribe": "Subscribe",
+                        "subscribeMessage": "Subscribed",
+                        "unsubscribe": "Unsubscribe",
+                        "unsubscribeMessage": "Unsubscribed",
+                        "delete": "Delete",
+                        "deleteMessage": "Deleted",
+                        "deleteConfirmText": "Are you sure you want to delete this post?",
+                        "deleteConfirmBtn": "Delete",
+                        "restore": "Restore",
+                        "restoreMessage": "Restored",
+                        "restoreConfirmText": "Are you sure you want to restore this post?",
+                        "restoreConfirmBtn": "Restore",
+                        "report": "Report",
+                        "reportMessage": "Reported",
+                        "pin": "Pin",
+                        "pinMessage": "Pinned",
+                        "pinConfirmText": "Are you sure you want to pin this post?",
+                        "pinConfirmBtn": "Pin",
+                        "unpin": "Unpin",
+                        "unpinMessage": "Unpinned",
+                        "unpinConfirmText": "Are you sure you want to unpin this post?",
+                        "unpinConfirmBtn": "Unpin",
+                        "hide": "Hide",
+                        "hideMessage": "Hid the post",
+                        "hideConfirmText": "Are you sure you want to hide this post?",
+                        "hideConfirmBtn": "Hide",
+                        "hideFromTrending": "Hide from trending",
+                        "hideFromTrendingMessage": "Hid post from trending",
+                        "hideFromTrendingConfirmText": "Are you sure you want to hide this post from trending?",
+                        "hideFromTrendingConfirmBtn": "Hide from trending",
+                        "show": "Show",
+                        "showMessage": "Showed the post",
+                        "showConfirmText": "Are you sure you want to show this post to everyone?",
+                        "showConfirmBtn": "Show",
+                        "moveToDiscussion": "Move to Discussion",
+                        "moveToDiscussionMessage": "Moved to Discussion",
+                        "moveToDiscussionConfirmText": "Are you sure you want to move this post to Discussion?",
+                        "moveToDiscussionConfirmBtn": "Move to Discussion",
+                        "saved": "Saved",
+                        "editorsPick": "EditorsPick",
+                        "officialPick": "OfficialPick",
+                        "uneditorsPick": "unEditorsPick",
+                        "undelete": "unDelete",
+                        "unmute": "unMute",
+                        "unofficialPick": "unOfficialPick",
+                        "unsunk": "unSunk",
+                        "sunk": "Sunk",
+                        "mute": "Mute"
+                      }
+                    },
+                    "searchResult": {
+                      "commentPrefix": " comment",
+                      "replyPrefix": " reply to ",
+                      "colon": ": "
+                    },
+                    "noDirectResultsHint": "No results. Here are some related threads.",
+                    "noResults": "There aren't any solution topics here yet!",
+                    "noMoreResults": "No more results",
+                    "backToTop": "Back to top",
+                    "report": {
+                      "reportModalTitle": "Report this content",
+                      "contentPlaceholder": "Additional feedback",
+                      "cancel": "Cancel",
+                      "confirm": "Confirm",
+                      "advertising": "Spam advertising",
+                      "sexual": "Sexual content",
+                      "violent": "Violent content",
+                      "terrorism": "Promotes terrorism",
+                      "illegal": "Illegal content",
+                      "abuse": "Abuse others",
+                      "nonEnglish": "Non English content",
+                      "other": "Others",
+                      "reportSuccess": "Report submitted!",
+                      "reportError": "Couldn't submit the report, please try again"
+                    },
+                    "blocker": {
+                      "subscribeToUnlock": "Subscribe to unlock.",
+                      "subscribeSubTitle": "Thanks for using LeetCode! To view this solution you must subscribe to premium.",
+                      "subscribe": "Subscribe"
+                    },
+                    "switchToRightTooltip": "Move to right",
+                    "switchToLeftTooltip": "Move to left",
+                    "switchFirstTimePopoverContent": "Click \"Switch Layout\" to move the solution panel right or left.",
+                    "switchFirstTimePopoverBtn": "Got it",
+                    "shareSolutionBanner": {
+                      "lastSubmissionBeats": "Your last submission beat \u003c0\u003e{{percentage}}\u003c/0\u003e of other submissions' runtime.",
+                      "lastSubmissionBeatsSmall": "Your submission beat \u003c0\u003e{{percentage}}\u003c/0\u003e of others' runtime.",
+                      "lastSubmissionMemoryBeats": "Your last submission beat \u003c0\u003e{{percentage}}\u003c/0\u003e of other submissions' memory usage.",
+                      "lastSubmissionMemoryBeatsSmall": "Your submission beat \u003c0\u003e{{percentage}}\u003c/0\u003e of others' memory usage.",
+                      "signInAndShareSolutions": "Sign in and share solutions.",
+                      "signIn": "Sign In",
+                      "shareMySolution": "Share my solution",
+                      "share": "Share",
+                      "getACSubmissionsToPublish": "Submit at least 1 AC to publish a solution."
+                    },
+                    "sideBySide": {
+                      "enterMode": "Enter Side by Side Mode",
+                      "exitMode": "Exit Side by Side Mode",
+                      "modeOn": "Side by Side Mode on",
+                      "modeOff": "Side by Side Mode off",
+                      "enterGuideTitle": "View multiple content?",
+                      "enterGuideDesc": "Try switching to Side by Side Mode. You can further customize your viewing experience in settings.",
+                      "exitGuideTitle": "Exit Side by Side Mode",
+                      "exitGuideDesc": "Exit Side by Side Mode to focus on one tab.",
+                      "goToSettings": "Go to Settings",
+                      "gotIt": "Got It"
+                    }
+                  },
+                  "comments": {
+                    "edited": "(Edited)",
+                    "tooShort": "Comment is too short",
+                    "noComments": "No comments yet.",
+                    "reply": "Reply",
+                    "mentionInputPlaceholder": "Tag a user or a problem",
+                    "user": "Users",
+                    "problem": "Problems",
+                    "mdRules": {
+                      "inlineCode": "your inline code...",
+                      "codeBlock": "code block",
+                      "link": "leetcode",
+                      "href": "https://leetcode.com"
+                    },
+                    "pinnedBy": "Pinned by {{pinnedBy}}",
+                    "share": "Share",
+                    "edit": "Edit",
+                    "shareCopySuccess": "Copied link to clipboard",
+                    "hideReplies": "Hide Replies",
+                    "showReplies": "Show {{num}} Replies",
+                    "cancel": "Cancel",
+                    "confirm": "Confirm",
+                    "preview": "Preview",
+                    "comment": "Comment",
+                    "typeCommentHere": "Type comment here... (Markdown supported)",
+                    "comments": "Comments",
+                    "sortBy": "Sort by",
+                    "newestToOldest": "Newest to Oldest",
+                    "oldestToNewest": "Oldest to Newest",
+                    "mostVotes": "Most Votes",
+                    "best": "Best",
+                    "editor": "Editor",
+                    "youMust": "You must",
+                    "verifyYourEmail": "verify your email",
+                    "first": "first",
+                    "readMore": "Read more",
+                    "somethingWentWrong": "Something went wrong",
+                    "areYouSure": "Are you sure?",
+                    "confirmDeleteComment": "Are you sure you want to delete this comment?",
+                    "confirmRestoreComment": "Are you sure you want to restore this comment?",
+                    "confirmHideComment": "Are you sure you want to hide this comment from non-authors?",
+                    "confirmShowComment": "Are you sure you want to show this comment to everyone?",
+                    "confirmPinComment": "Are you sure you want to pin this comment?",
+                    "confirmUnpinComment": "Are you sure you want to unpin this comment?",
+                    "reward": "Reward",
+                    "delete": "Delete",
+                    "hide": "Hide",
+                    "show": "Show",
+                    "askQuestion": "Ask Question",
+                    "feedback": "Feedback",
+                    "tips": "Tips",
+                    "chooseAType": "Choose a type",
+                    "showMoreReplies": "Show more replies",
+                    "hideSuccess": "Comment hidden from non-authors.",
+                    "showSuccess": "Comment now visible to everyone.",
+                    "pinSuccess": "Comment has been pinned.",
+                    "unpinSuccess": "Comment has been unpinned.",
+                    "deleteSuccess": "Comment Successfully Deleted",
+                    "restore": "Restore",
+                    "restoreSuccess": "Comment Successfully Restored",
+                    "hidden": "Hidden",
+                    "report": "Report",
+                    "pin": "Pin",
+                    "pinned": "Pinned",
+                    "unpin": "Unpin",
+                    "hideComment": "Hide Comment",
+                    "showComment": "Show Comment",
+                    "move": "Move to Solution",
+                    "moveTitle": "Title:",
+                    "moveTitlePlaceholder": "Enter title here",
+                    "moveSuccess": "Comment successfully moved",
+                    "genericError": "Something went wrong",
+                    "postSuccess": "Comment successfully posted"
+                  },
+                  "post-solution": {
+                    "meta": {
+                      "newTitle": "{{title}} - LeetCode - New Solution",
+                      "editTitle": "{{title}} - LeetCode - Edit Solution"
+                    },
+                    "filterTopic": "Filter topics",
+                    "publishSolution": "Solution",
+                    "publishSolutionTooltip": "Submit at least 1 AC to publish a solution",
+                    "restore": "Restore from draft",
+                    "overwriteWithLastAc": "Overwrite with the latest AC submission",
+                    "generatedWithSources": {
+                      "lastAc": "Generated from the latest AC submission",
+                      "submission": "Generated from the chosen submission",
+                      "draft": "Restored from draft"
+                    },
+                    "editingSolution": "Editing the existing solution",
+                    "blockCode": "Code Block",
+                    "tag": "Tag",
+                    "related": "Related",
+                    "selectATag": "Please select at least one tag",
+                    "post": "Post",
+                    "publishError": "Could not publish solution",
+                    "imgUploadSuccuss": "Upload successfully",
+                    "imgUploadError": "Upload failure",
+                    "guideTooltip": "Markdown Guide",
+                    "saved": "Saved"
+                  },
+                  "new-study-plan": {
+                    "detail": {
+                      "metadata": {
+                        "title": "{{plan}} - Study Plan - LeetCode",
+                        "description": "Level up your coding skills and quickly land a job. This is the best place to expand your knowledge and get prepared for your next interview.",
+                        "notFound": "Not Found"
+                      },
+                      "weekTextAbbr": {
+                        "sun": "SUN",
+                        "mon": "MON",
+                        "tue": "TUE",
+                        "wed": "WED",
+                        "thu": "THU",
+                        "fri": "FRI",
+                        "sat": "SAT"
+                      },
+                      "weekText": {
+                        "sun": "Sunday",
+                        "mon": "Monday",
+                        "tue": "Tuesday",
+                        "wed": "Wednesday",
+                        "thu": "Thursday",
+                        "fri": "Friday",
+                        "sat": "Saturday"
+                      },
+                      "myPlan": "My Plan",
+                      "problemLeft": "problem left",
+                      "problemsLeft": "problems left",
+                      "notification": "Notification",
+                      "setUpSp": "Set up a study plan",
+                      "solvedText": "Solved",
+                      "problem": "problem",
+                      "problems": "problems",
+                      "learnMore": "Learn More",
+                      "you": "You",
+                      "weeklyRanking": "Weekly Ranking",
+                      "weeklyRankingToolTip": "The ranking is based on the number of solved problems in this problem list this week, and the leaderboard is updated hourly (no ranking is calculated if no problems are solved this week).",
+                      "solvePrev": "I commit to solve",
+                      "solveNext": "problems on every",
+                      "startTitle": "New Study Plan",
+                      "confirmStartText": "Once you save it, you cannot make any modifications. Start now?",
+                      "quitTypeTipPrev": "Quit the study plan by typing ",
+                      "quitTypeTipNext": " below.",
+                      "subscribeToUnlock": "Subscribe to unlock",
+                      "subscribeToUnlockContent": "Thanks for using LeetCode! To view this study plan you must subscribe to premium.",
+                      "start": "Start",
+                      "share": "Share",
+                      "backToExplore": "Back to Plan List",
+                      "goCurrentPage": "retry this study plan",
+                      "premiumTip": "Premium Study Plan",
+                      "copyLink": "Copy Link",
+                      "copiedSuccess": "Copied to clipboard",
+                      "more": "More",
+                      "quit": "Quit",
+                      "back": "Back",
+                      "quitTitle": "Are you sure?",
+                      "quitContent": "When you quit your study plan, all problem solved statues will be reset and you can't restore progress. Are you sure you want to quit?",
+                      "showTags": "Show tags",
+                      "summary": "Summary",
+                      "showMore": "Show More",
+                      "showLess": "Show Less",
+                      "award": "Award",
+                      "awardCongratulation": "Congratulations! You have already earned this badge.",
+                      "related": "Related",
+                      "viewMore": "View More",
+                      "todo": "Todo",
+                      "attempted": "Attempted",
+                      "solved": "Solved",
+                      "markAsSolved": "Mark As Solved",
+                      "markAsSolvedTip": "You have already solved this question in other place, do you want to “Mark as solved” here?",
+                      "difficulty": "Difficulty",
+                      "congratulation": "🎉 Congratulations!",
+                      "solvedAllProblemsText": "You just solved all the problems from {{title}}!",
+                      "checkBadge": "Check out the badge on your",
+                      "profilePage": "Profile page",
+                      "wearGlory": "and wear the glory!",
+                      "checkMyStudyPlan": "Check My Study Plan",
+                      "joinSuccessfully": "Join Successfully",
+                      "quitSuccessfully": "Quit Successfully",
+                      "setSuccessfully": "Set Successfully",
+                      "errorTip": "Something wrong, please try again.",
+                      "quitTip": "When you quit your study plan, all problem solved statues will be reset and you can't restore progress.",
+                      "pastSolved": "Past Solved",
+                      "solution": "Solution",
+                      "points": "pt.",
+                      "ranking": "Ranking"
+                    },
+                    "list": {
+                      "metadata": {
+                        "title": "Study Plan - LeetCode",
+                        "desc": "Start a study plan that's tailored to your needs to maximize your learning potential. Track your progress and make consistent growth!"
+                      },
+                      "title": "Study Plan",
+                      "ongoing": "Ongoing",
+                      "myPlan": "My Study Plan",
+                      "featured": "Featured",
+                      "showMore": "Show More",
+                      "revertOldPlan": "Revert to the old study plan",
+                      "revertOldPlanTipTitle": "🌟 Revert to the old version",
+                      "revertOldPlanTipDesc": "You can click this button to revert to the old study plan",
+                      "cancel": "Cancel",
+                      "iSee": "I see"
+                    },
+                    "myStudyPlan": {
+                      "metadata": {
+                        "title": "LeetCode - The World's Leading Online Programming Learning Platform",
+                        "desc": "Level up your coding skills and quickly land a job. This is the best place to expand your knowledge and get prepared for your next interview."
+                      },
+                      "title": "My Study Plan",
+                      "ongoing": "Ongoing",
+                      "history": "History",
+                      "noOngoingPlan": "You don’t have the ongoing plan",
+                      "noHistoryPlan": "You don’t have the history plan"
+                    },
+                    "common": {
+                      "studyPlan": "Study Plan",
+                      "tryNow": "Try it now!",
+                      "noTanks": "No, thanks",
+                      "newPlan": "✨ Brand New Study Plan!",
+                      "newPlanDesc": "Join a new study plan to maximize your learning potential. Track your progress and focus on the daily questions to make consistent growth",
+                      "seeAll": "See all",
+                      "totalProgress": "Total Progress",
+                      "progress": "Progress",
+                      "completed": "Completed",
+                      "giveUp": "Give up",
+                      "ongoing": "Ongoing",
+                      "ongoingStudyPlan": "Ongoing Study Plan",
+                      "later": "Later",
+                      "joinInQDTitle": "Start this study plan?",
+                      "joinInQD": "Join the study plan to maximize your learning potential. Track your progress and focus on the daily questions to make consistent growth",
+                      "doNotRemind": "Do not remind me today",
+                      "exploreButton": "Explore Study Plan",
+                      "notFoundText": "Sorry, this page could not be found, please check your spelling or explore a new study plan"
+                    },
+                    "survey": { "submit": "Submit" },
+                    "satisfactionSurvey": { "submitBtnText": "Get LeetCoins" }
+                  }
+                },
+                "zh": {
+                  "common": {
+                    "404": {
+                      "title": "力扣",
+                      "pageNotFound": "页面不存在",
+                      "message": "抱歉！我们找不到您想访问的页面..."
+                    },
+                    "meta": { "title": "", "description": "", "keywords": "" },
+                    "ok": "好",
+                    "cancel": "取消",
+                    "confirm": "确认",
+                    "update": "更新",
+                    "submit": "提交",
+                    "save": "保存",
+                    "netFailed": "网络错误",
+                    "header": {
+                      "logo": { "url": "", "description": "" },
+                      "title": { "problemset-all": "" },
+                      "action": { "login": { "text": "", "url": "" } }
+                    },
+                    "conjunctions": { "and": "and", "or": "或" },
+                    "pages": {
+                      "leetcode": "LeetCode",
+                      "explore": "学习",
+                      "problems": "题库",
+                      "interview": {
+                        "interview": "求职",
+                        "onlineInterview": "在线面试",
+                        "assessment": "Assessment"
+                      },
+                      "contest": "竞赛",
+                      "discuss": "讨论",
+                      "store": {
+                        "store": "商店",
+                        "redeem": "力扣周边",
+                        "premium": "Plus 会员",
+                        "shop": "精品商城"
+                      },
+                      "admin": {
+                        "admin": "管理员",
+                        "library": "题库",
+                        "translation": "翻译",
+                        "operations": "运营管理",
+                        "scores": "点数",
+                        "contribute": "贡献",
+                        "backend": "后台管理",
+                        "twoStepVerification": "二步验证",
+                        "internalContest": "Internal Contest Dashboard",
+                        "contestAdmin": "Contest Cheating Dashboard",
+                        "dangerZone": "Danger Zone",
+                        "review": "Review",
+                        "contestDashboard": "Contest Dashboard"
+                      },
+                      "mobileApp": "下载 App",
+                      "playground": "Playground",
+                      "myPlayground": "我的 Playground",
+                      "signIn": "登录",
+                      "register": "注册",
+                      "signOut": "退出"
+                    },
+                    "userMenu": {
+                      "renew": "续订",
+                      "getPremium": "升级 Plus 会员享专属特权",
+                      "tryNewFeatures": "体验新功能",
+                      "orders": "订单",
+                      "resume": "个人资料",
+                      "translateQuestions": "题目以中文展示",
+                      "translateQuestionsEn": "题目以英文显示",
+                      "enterprise": "企业招聘",
+                      "revertToOldVersion": "经典模式",
+                      "categories": {
+                        "myList": "收藏夹",
+                        "notebook": "笔记本",
+                        "submissions": "我的题解",
+                        "session": "进度管理",
+                        "points": "积分",
+                        "progress": "做题分析"
+                      },
+                      "unmockUser": "Unmock User",
+                      "account": "账号设置",
+                      "appearance": "外观",
+                      "appearanceContent": {
+                        "auto": "跟随系统",
+                        "light": "浅色",
+                        "dark": "深色"
+                      }
+                    },
+                    "streakCounter": {
+                      "finished": "干的好！明天再来挑战！",
+                      "unfinished": "解决今天的「每日 1 题」，刷新你的连胜记录！",
+                      "buyTimeTravelTicket": "购买补签卡",
+                      "missedOneDayThisMonth": "这个月你错过了 1 天.",
+                      "missedDaysThisMonth": "这个月你错过了 {{count}} 天."
+                    },
+                    "playground": {
+                      "playground": "Playground",
+                      "remainingPlaygrounds": "数量",
+                      "renew": "升级",
+                      "myPlaygrounds": "我的 Playgrounds",
+                      "templates": {
+                        "consoleApplication": "控制台程序",
+                        "empty": "空白 Playground",
+                        "frontend": "前端程序",
+                        "machineLearning": "机器学习"
+                      }
+                    },
+                    "links": {
+                      "admin": {
+                        "scores": "/library/scores",
+                        "translation": "/contribution/translation/question/admin/",
+                        "operations": "/management"
+                      },
+                      "premium": "/premium",
+                      "discuss": "/circle",
+                      "interview": "/company",
+                      "shop": "https://detail.youzan.com/show/goods/newest?alias=271n43vr9hen7",
+                      "onlineInterview": "https://leetcode.cn/interview",
+                      "profileArticles": "/profile/articles",
+                      "tryNewFeatures": "/new/",
+                      "orders": "/order",
+                      "explore": "/leetbook",
+                      "resume": "/profile/info/",
+                      "playground": "/playground",
+                      "assessment": "/assessment/",
+                      "account": "/profile/info"
+                    },
+                    "pagination": { "perpage": " 条/页" },
+                    "expand": "展开",
+                    "collapse": "收起",
+                    "difficulty": {
+                      "easy": "简单",
+                      "medium": "中等",
+                      "hard": "困难"
+                    },
+                    "data": {
+                      "question": {
+                        "difficulty": {
+                          "easy": "简单",
+                          "medium": "中等",
+                          "hard": "困难"
+                        }
+                      }
+                    },
+                    "markdown": { "heading": "heading", "quote": "Quote" },
+                    "mentions": { "users": "用户", "problems": "题目" },
+                    "confirmModal": {
+                      "title": "确定执行此操作?",
+                      "confirmBtn": "确定",
+                      "cancelBtn": "取消"
+                    },
+                    "saving": "保存中...",
+                    "saved": "保存成功",
+                    "autoSaved": "已自动保存",
+                    "loginRequired": "您尚未登录",
+                    "verifiedRequired": "请绑定手机号或者邮箱后继续操作",
+                    "phoneVerifiedRequired": "请绑定手机号后继续操作",
+                    "maybeVerifiedRequired": "请绑定手机号后继续操作",
+                    "copy": "复制",
+                    "copyToEditor": "复制到编辑器",
+                    "copied": "已复制",
+                    "copyLink": "复制链接",
+                    "viewMore": "查看更多",
+                    "viewLess": "收起",
+                    "code": "代码",
+                    "dailyCheckIn": "+1 每日登录",
+                    "//maybeVerifiedRequired": "maybeVerifiedRequired means email in LCUS and phone in LCCN",
+                    "easterEgg": {
+                      "rewardMessage": "恭喜您获得了 10 积分，Happy LeetCoding!"
+                    },
+                    "survey": {
+                      "veryDissatisfied": "非常不满意",
+                      "verySatisfied": "非常满意",
+                      "next": "下一题",
+                      "continue": "继续",
+                      "submit": "提交",
+                      "questionNo": "问卷题目 {{current}}/{{total}}",
+                      "thanksMsg": "🎉 感谢您的反馈!"
+                    },
+                    "qdNav": {
+                      "backTitle": "题库",
+                      "expandPanel": "展开面板",
+                      "preQuestion": "上一题",
+                      "nextQuestion": "下一题",
+                      "pickOne": "随机一题",
+                      "openInNewTab": "在新的标签页打开"
+                    },
+                    "premiumModal": {
+                      "learnMore": "了解更多权益",
+                      "subscribe": "升级 Plus 会员"
+                    },
+                    "truncatedContent": {
+                      "viewAll": "查看全部",
+                      "viewLess": "收起",
+                      "openRaw": "打开源码",
+                      "showMore": "显示更多",
+                      "showLess": "显示更少"
+                    },
+                    "safariNotUse": "当前 Safari 版本过低，为了更好的使用体验，请升级到最新版本",
+                    "medal": {
+                      "metadataTitle": "勋章 - 力扣（LeetCode）",
+                      "congratulation": "恭喜获得",
+                      "genPoster": "生成海报",
+                      "genPostering": "生成中...",
+                      "saveImgMobile": "长按图片保存",
+                      "saveImgPc": "右键保存图片",
+                      "medalEmpty": "暂无可领取的勋章"
+                    }
+                  },
+                  "problems": {
+                    "meta": {
+                      "title": "{{title}} - 力扣（LeetCode）",
+                      "description": "{{title}} - {{content}}",
+                      "ogImage": "https://static.leetcode-cn.com/cn-legacy-assets/images/LeetCode_Sharing.png",
+                      "defaultDescription": "备战技术面试？力扣提供海量技术面试资源，帮助你高效提升编程技能,轻松拿下世界 IT 名企 Dream Offer。"
+                    },
+                    "tabs": {
+                      "description": "题目描述",
+                      "editorial": "官方题解",
+                      "discussion": "评论",
+                      "solutions": "题解",
+                      "submissions": "提交记录",
+                      "submissionOverview": "提交记录概述",
+                      "code": "代码",
+                      "testcase": "测试用例",
+                      "result": "测试结果",
+                      "debugger": "调试器",
+                      "settings": "设置",
+                      "note": "笔记",
+                      "guide": "指引",
+                      "preview": "预览",
+                      "previewConsole": "Web 控制台",
+                      "rawText": "原始文本",
+                      "resultDiff": "差异",
+                      "disabledTooltips": {
+                        "editorial": "Editorial is not available for this question."
+                      }
+                    },
+                    "feedback": {
+                      "feedback": "反馈",
+                      "revertToOld": "回退到上一个版本"
+                    },
+                    "lockedQuestion": {
+                      "subscribe": "升级 Plus 会员",
+                      "subscribeToUnlockMessage": "感谢使用力扣！您需要升级为 Plus 会员来解锁该题目",
+                      "subscribeToUnlock": "该题目是 Plus 会员专享题"
+                    },
+                    "unsupportedFeature": {
+                      "upgradeToIdeTitle": "升级至动态布局",
+                      "signInToTryOut": "登录以体验",
+                      "tryOut": "立即体验",
+                      "features": {
+                        "frontendQuestion": "新的前端问题仅在动态布局中支持。切换到此格式以获得更加沉浸的LeetCode体验并访问这些问题。"
+                      }
+                    },
+                    "satisfactionSurvey": { "submitBtnText": "提交" },
+                    "panel": {
+                      "recommend": "为你推荐",
+                      "description": "为你精选近期热门题目"
+                    },
+                    "dynamicLayout": {
+                      "maximize": "放大",
+                      "exit": "退出放大",
+                      "foldPanel": "折叠",
+                      "unFoldPanel": "展开",
+                      "moveTabset": "{{name}} 等 {{count}} 个 tab",
+                      "disabledUnFold": "当前布局结构不支持一键展开，请手动拖拽",
+                      "layoutManager": {
+                        "hints": "帮助",
+                        "layouts": "布局",
+                        "featureTitle": "布局过于凌乱？",
+                        "featureContent": "一键重置布局现已支持！你甚至可以自定义布局模版，随时应用。",
+                        "gotIt": "我知道了",
+                        "tryNow": "立即体验",
+                        "featureInfo": "创建或管理你的布局，获得更佳学习体验。",
+                        "default": "预设",
+                        "note": "笔记",
+                        "debug": "调试",
+                        "saveCurrentLayout": "保存当前布局",
+                        "saveNewLayout": "保存新布局",
+                        "nameYourLayout": "命名当前布局",
+                        "temporaryTabs": "临时标签页",
+                        "temporaryTabsWarningBefore": "保存布局时，将不包含 ",
+                        "temporaryTabsWarningAfter": "",
+                        "temporaryTabsContent": "临时标签页仅在特定题目下可见，例如题解详情和提交结果详情。",
+                        "cancel": "取消",
+                        "save": "保存",
+                        "layoutSaved": "已保存布局",
+                        "layoutDeleted": "布局已删除",
+                        "upgradeToSaveFirst": "Plus 会员解锁",
+                        "upgradeToSaveSecond": "自定义布局",
+                        "subscribe": "升级",
+                        "apply": "应用",
+                        "upgradeToApply": "Plus 会员解锁此布局",
+                        "delete": "删除",
+                        "deleteTitle": "删除 “{{name}}”？",
+                        "deleteContent": "此布局将被永久删除且不可恢复。",
+                        "no": "取消",
+                        "edit": "编辑",
+                        "editLayout": "编辑布局",
+                        "updateToCurrentLayout": "更新至当前布局"
+                      },
+                      "featureModal": {
+                        "dynamicLayout": "灵动布局",
+                        "title": "升级「灵动布局」",
+                        "content": "屏幕空间由你灵活掌控，聚焦真正重要的内容，畅享更沉浸的编码体验。",
+                        "tryOut": "立即体验"
+                      },
+                      "settingRunSubmitPopover": {
+                        "title": "自由配置工具栏？",
+                        "content": "现在你可以将运行 / 提交 / 调试按钮移至代码编辑器。",
+                        "buttonText": "前往设置"
+                      }
+                    },
+                    "settings": {
+                      "settings": "设置",
+                      "lab": "实验室",
+                      "premium": "Plus",
+                      "layout": {
+                        "categoryTitle": "灵动布局",
+                        "resetToDefaultLayout": "重置为默认布局",
+                        "reset": "重置",
+                        "runSubmitPosition": "运行 / 提交 / 调试按钮位置",
+                        "toolbar": "顶部工具栏",
+                        "code-editor": "代码编辑器",
+                        "revertToSplitViewMode": "返回双栏布局"
+                      },
+                      "editor": {
+                        "categoryTitle": "代码编辑器",
+                        "fontSize": "字体大小",
+                        "keyBinding": "键位绑定",
+                        "keyBindingVim": "Vim",
+                        "keyBindingEmacs": "Emacs",
+                        "keyBindingStandard": "Standard",
+                        "tabSize": "Tab 长度",
+                        "spaces": "{{count}} 个空格",
+                        "wordWrap": "自动换行"
+                      },
+                      "shortcuts": {
+                        "categoryTitle": "键盘快捷键",
+                        "or": "或",
+                        "general": "常规",
+                        "runCode": "执行代码",
+                        "submit": "提交解答",
+                        "closeTab": "关闭 tab",
+                        "maximizePanel": "放大 / 退出放大面板",
+                        "fullScreen": "进入 / 退出全屏",
+                        "debug": "调试",
+                        "debugStart": "开始调试",
+                        "debugStop": "停止调试",
+                        "debugSkipForward": "继续",
+                        "debugStepOver": "单步跳过",
+                        "debugStepIn": "单步调试",
+                        "debugStepOut": "单步跳出",
+                        "debugRestart": "重启",
+                        "codeEditor": "代码编辑器",
+                        "editorIndent": "行缩进",
+                        "editorIndentFew": "行减少缩进",
+                        "editorMoveLines": "上下移动行",
+                        "editorCut": "剪切",
+                        "editorToggleComment": "切换行注释",
+                        "editorUndo": "撤销",
+                        "editorRedo": "重做"
+                      },
+                      "advanced": {
+                        "categoryTitle": "高级设置",
+                        "premiumTitle": "LeetCode Plus",
+                        "premiumDesc": "升级 plus 会员，即可在灵动布局中畅享定制化的学习体验。",
+                        "learnMore": "了解详情",
+                        "realTimeResizing": "布局实时变化",
+                        "realTimeResizingDesc": "拖动调整窗口尺寸时，布局实时变化。",
+                        "multipleTab": "以新标签页呈现多个内容组件",
+                        "multipleTabDesc": "列表中的元素（如题解、提交记录等）可在新标签页中打开，并同时允许打开多个标签页。",
+                        "openAfterActive": "在激活的 Panel 中打开",
+                        "openAfterSimilar": "在同类标签最新位置后打开",
+                        "customLayout": "保存自定义布局 (云端)",
+                        "customLayoutDesc": "会员可额外存储 3 个自定义布局模版。",
+                        "upgrade": "升级",
+                        "view": "查看",
+                        "multipleTabUpdateAlert": {
+                          "title": "更新设置?",
+                          "desc": "更新此项配置，将自动关闭所有已打开的题解和提交记录。确认更新吗？",
+                          "no": "取消",
+                          "update": "更新"
+                        }
+                      }
+                    },
+                    "preview": {
+                      "goBackTooltip": "返回",
+                      "goForwardTooltip": "前进",
+                      "refreshTooltip": "刷新",
+                      "openInNewTabTooltip": "在新标签页中打开",
+                      "upgradeToGetUrl": "升级至高级会员以查看链接"
+                    },
+                    "previewConsole": {
+                      "isEmpty": "控制台为空",
+                      "clearTooltip": "清空控制台",
+                      "clearedAt": "控制台清空于 {{time}}"
+                    },
+                    "ideGuide": {
+                      "introIdeTitle": "灵动布局",
+                      "new": "全新",
+                      "introInfo": "沉浸式畅享自由编码体验，潜力无边",
+                      "setTitle": "选择运行/提交按钮的位置",
+                      "setTip": "你也可以在设置中随时修改按钮出现的位置",
+                      "enableIde": "开启灵动布局",
+                      "of": "/",
+                      "skipTour": "跳过",
+                      "back": "上一步",
+                      "next": "下一步",
+                      "done": "完成",
+                      "toolbarTitle": "工具栏",
+                      "toolbarContent": "包含运行代码、提交、笔记等主要工具。",
+                      "tabsTitle": "标签页",
+                      "tabsContent": "通过拖动标签页来，即可定制布局为您理想的样子。",
+                      "resizeTitle": "调整面板大小",
+                      "resizeContent": "拖拽分隔条从而实现面板的大小调整，以适应您的空间需求。",
+                      "maximizeTitle": "最大化一个面板",
+                      "maximizeContent": "双击面板顶部的标签栏即可最大化该面板并增强您对该页内容的专注度。",
+                      "expandCollapseTitle": "展开 / 折叠",
+                      "expandCollapseContent": "点击以展开或折叠面板，为重要内容腾出更多的空间。",
+                      "settingsTitle": "设置",
+                      "settingsContent": "自定义灵活布局、代码编辑器、快捷键和高级设置。",
+                      "maybeLater": "稍后再说"
+                    },
+                    "contest": {
+                      "toolbar": {
+                        "userAccepted": "通过的用户数",
+                        "userAcceptedShort": "通过的用户数",
+                        "userTried": "尝试过的用户数",
+                        "userTriedShort": "尝试过的用户数",
+                        "totalAccepted": "用户总通过次数",
+                        "totalAcceptedShort": "用户总通过次数",
+                        "totalSubmissions": "用户总提交次数",
+                        "totalSubmissionsShort": "用户总提交次数"
+                      },
+                      "navbar": { "classicMode": "Classic Mode" }
+                    }
+                  },
+                  "console": {
+                    "meta": { "title": "题目详情" },
+                    "console": "控制台",
+                    "run": "运行",
+                    "submit": "提交",
+                    "resetTestcases": "重置测试用例",
+                    "debug": "调试",
+                    "testcase": "测试用例",
+                    "debugger": "调试器",
+                    "testcaseNumber": "Case {{ number }}",
+                    "cloneCurrentTestcase": "克隆当前用例",
+                    "testcaseCount": "{{ count }}/{{ max }} 个测试用例",
+                    "switchToRawEditor": "使用文本编辑器编写用例",
+                    "switchToTabEditor": "使用标签效果编辑器编写用例",
+                    "switchConsoleToLeft": "控制台置于左侧",
+                    "switchConsoleToRight": "控制台置于右侧",
+                    "testcasePlaceholder": "请输入测试用例",
+                    "shellTestcaseBlocker": "Shell 题目无需设置测试用例",
+                    "sourceMode": "Source Mode",
+                    "sourceModeText": "你可以在文本编辑器里编写测试用例了",
+                    "noThanks": "知道了",
+                    "tryNow": "立即使用",
+                    "inconsistentResults": "执行跟提交结果不一致?",
+                    "inconsistentResultsContent": "您的程序可能使用了全局变量或者自定义的类内变量，需要您避免申明类内静态变量以及全局变量，或者手动初始化。",
+                    "gotIt": "明白了",
+                    "readMore": "阅读更多",
+                    "result": {
+                      "result": "执行结果",
+                      "stdout": "标准输出",
+                      "noResult": "请先执行代码",
+                      "notAvailable": "暂不展示",
+                      "slowdown": {
+                        "premium": "你的提交过于频繁，请稍候重试",
+                        "first": "你的提交过于频繁，请稍候重试，或",
+                        "second": "升级 Plus 会员",
+                        "third": "，可减少等待时间"
+                      },
+                      "networkError": "网络错误，请稍后刷新页面重试",
+                      "serverError": "未知的服务器错误，请联系我们的团队进行技术支持。",
+                      "unknownError": "未知错误",
+                      "compileError": "编译出错",
+                      "runtimeError": "执行出错",
+                      "copyCompileError": "复制错误信息",
+                      "copied": "已复制",
+                      "viewAll": "查看全部",
+                      "viewLess": "收起",
+                      "outputLimitExceeded": "超出输出限制",
+                      "timeLimitExceeded": "超出时间限制",
+                      "memoryLimitExceeded": "超出内存限制",
+                      "timeout": "请求超时",
+                      "internalError": "内部错误",
+                      "accepted": "通过",
+                      "finished": "完成",
+                      "wrongAnswer": "解答错误",
+                      "invalidTestcase": "测试用例非有效值",
+                      "runtime": "执行用时",
+                      "input": "输入",
+                      "output": "输出",
+                      "expected": "预期结果",
+                      "contribution": "贡献测试用例",
+                      "pending": "运行中...",
+                      "premiumPending": "极速判题中...",
+                      "judging": "判题中...",
+                      "debugging": "调试中...",
+                      "speedUp": "开启极速判题",
+                      "lastExecutedInput": "最后执行的输入",
+                      "openTestcase": "查看测试用例",
+                      "testcasesPassed": "个通过的测试用例",
+                      "testPassedButTookTooLong": "测试用例通过了，但耗时太长。",
+                      "useTestcaseAsInput": "添加到测试用例",
+                      "addedTestcaseMessage": "成功添加测试用例",
+                      "testcaseExistsMessage": "测试用例已存在",
+                      "cantUseTestcaseAsInput": "测试用例数达到最大限制",
+                      "maxTestcaseCountReached": "测试用例数达到上限 {{ count }} 个",
+                      "debugger": "调试器",
+                      "copyContent": "已复制到剪切板",
+                      "moreLine_one": "更多",
+                      "moreLine_other": "更多",
+                      "edit": "编辑"
+                    },
+                    "ai": {
+                      "title": "LeetWiz",
+                      "beta": "Beta",
+                      "analyzingCode": "分析代码...",
+                      "codeErrorHint": "为什么我会遇到这个 错误？",
+                      "fullName": "LeetWiz - 一款AI助手",
+                      "shortName": "LeetWiz",
+                      "description": "忘记加分号了吗? LeetWiz 帮助你专注于重要的事情，让你不断进步. 它会帮助你找出运行代码/编译错误的原因，并提供解决方法.",
+                      "fixedError": "您似乎已经修复了运行时/编译错误。请记住，我目前只支持帮助解决运行代码错误或编译错误 😊",
+                      "morePremiumFeatures": "更多高級功能"
+                    },
+                    "info": {
+                      "info": "注意",
+                      "content": "\u003c0\u003e执行代码与提交代码的结果不同？如果您在C/C++的代码中使用了全局变量，请看\u003c/0\u003e \u003c1\u003e这里\u003c/1\u003e",
+                      "ok": "确定",
+                      "howToCreateBinaryTreeTestcases": "如何创建二叉树测试用例？",
+                      "howToCreateDatabaseTestcases": "如何创建数据库测试用例？"
+                    },
+                    "execute": "Execute",
+                    "to": "to",
+                    "fullTreeTooBig": "数据太大，无法展示",
+                    "or": "or",
+                    "showFullTree": "点击查看完整的二叉树",
+                    "visualizer": {
+                      "dataTooLarge": "数据量过大，只展示部分",
+                      "parseFailed": "生成错误，请检查格式是否正确",
+                      "dataNotSupported": "不支持可视化",
+                      "outputDataTypeNotSupported": "输出类型不支持可视化",
+                      "initFailed": "画布初始化失败，请刷新页面重试"
+                    },
+                    "verifyEmail": "请绑定邮箱后继续操作",
+                    "signToRunOrSubmit": "{{action}}需要登录",
+                    "signToRunAndSubmit": "运行和提交代码需要\u003c0\u003e登录\u003c/0\u003e",
+                    "verifyToRunAndSubmit": "您的手机号尚未绑定，\u003c0\u003e前往验证\u003c/0\u003e！ ",
+                    "notAvailableDuringDebugging": "调试状态不可用",
+                    "notAvailableDuringExecuting": "代码执行中不可用",
+                    "nonVerifyMsg": "请绑定手机号后继续操作",
+                    "frontendTestcases": {
+                      "reset": "重置",
+                      "lnCol": "行 {{lineNumber}}，列 {{column}}",
+                      "guideTooltip": "测试用例指南",
+                      "guideTitle": "测试用例指南"
+                    }
+                  },
+                  "code-editor": {
+                    "commonConfirmTitle": "操作确认",
+                    "fullScreen": "全屏",
+                    "exitFullScreen": "退出全屏",
+                    "autocomplete": {
+                      "button": "智能模式",
+                      "lspTooltip": "智能补全/语法检查",
+                      "basicTooltip": "基础代码补全。",
+                      "basicWithLspError": "基础代码补全。双击重试智能代码补全。",
+                      "lspConnectionError": "连接失败",
+                      "lspNotSupportedTooltip": "该语言暂不支持智能补全 / 语法检查",
+                      "needToLoginTooltip": "登录来使用自动补全",
+                      "notPremiumTooltip": "升级 Plus 会员使用自动补全"
+                    },
+                    "langInfo": "了解语言环境",
+                    "settings": {
+                      "name": "代码编辑器设置",
+                      "fontSize": "字体设置",
+                      "fontSizeDesc": "调整适合你的字体大小。",
+                      "theme": "主题设置",
+                      "themeDesc": "切换不同的代码编辑器主题，选择适合你的语法高亮。",
+                      "themeDark": "Dark",
+                      "themeLight": "Light",
+                      "themeSystem": "System",
+                      "keyBinding": "键位绑定",
+                      "keyBindingDesc": "想要练习使用 Vim 或者 Emacs？你可以在这里切换这些预设的键位绑定。",
+                      "keyBindingVim": "Vim",
+                      "keyBindingEmacs": "Emacs",
+                      "keyBindingStandard": "Standard",
+                      "tabSize": "Tab 长度",
+                      "tabSizeDesc": "选择你想要的 Tab 长度，默认设置为4个空格。",
+                      "spaces": "{{count}}",
+                      "wordWrap": "自动换行"
+                    },
+                    "shortcuts": {
+                      "name": "编辑器快捷键",
+                      "run": "执行代码",
+                      "submit": "提交解答",
+                      "debug": "调试",
+                      "indent": "行缩进",
+                      "indentFew": "行减少缩进",
+                      "moveLines": "上下移动行",
+                      "cut": "剪切",
+                      "toggleComment": "切换行注释",
+                      "undo": "撤销",
+                      "redo": "重做",
+                      "note": "笔记"
+                    },
+                    "reset": {
+                      "tip": "还原到默认的代码模版",
+                      "confirmContent": "您将放弃所有更改并初始化代码！",
+                      "resetServer": "您的代码已在 {{time}} 保存在云端,",
+                      "restore": "恢复"
+                    },
+                    "history": {
+                      "title": "添加了备注的 {{lang}} 提交记录",
+                      "tip": "获取备注过的提交记录",
+                      "description": "仅展示当前语言下提交的代码；选中并确认后，当前代码编辑区的全部内容将会被替换。",
+                      "status": "结果",
+                      "runtime": "执行用时",
+                      "memory": "消耗内存",
+                      "time": "时间",
+                      "topic": "标签",
+                      "notes": "备注",
+                      "noNotes": "暂无提交记录！"
+                    },
+                    "timer": {
+                      "start": "开始计时",
+                      "hide": "隐藏",
+                      "show": "展示",
+                      "reset": "重置",
+                      "pause": "暂停",
+                      "continue": "继续计时",
+                      "contest": {
+                        "penaltyTimeDescription": "每个错误提交增加 5 分钟罚时"
+                      }
+                    },
+                    "debugger": {
+                      "loginToDebug": "启用调试功能需要登录",
+                      "name": "调试器",
+                      "stdout": "标准输出",
+                      "input": "输入",
+                      "enterTip": "点击行号添加断点",
+                      "exit": "退出调试",
+                      "start": "开始调试",
+                      "stop": "停止调试",
+                      "startShort": "调试",
+                      "stopShort": "停止",
+                      "watch": "监听表达式",
+                      "local": "本地变量",
+                      "watchHolder": "请输入需要监听的变量，按回车确认",
+                      "controlStart": "开始调试",
+                      "controlForward": "继续",
+                      "controlStepOver": "单步跳过",
+                      "controlStepOut": "单步跳出",
+                      "controlStepIn": "单步调试",
+                      "controlReset": "重置",
+                      "exited": "已经有一个调试会话在运行，是否将其终止？",
+                      "startToWatch": "开启调试后查看表达式",
+                      "watchTip": "开启调试才可添加表达式",
+                      "startViewVars": "开启调试查看本地变量",
+                      "noVars": "暂无变量",
+                      "startViewOutput": "开启调试查看输出",
+                      "noOutput": "暂无输出...",
+                      "edited": "代码已变更，需要重启调试",
+                      "cantAddTestcase": "您已達到最大測試用例數",
+                      "langNotSupported": "{{lang}}暂不支持调试功能",
+                      "expressionsNotSupported": "{{lang}} 不支持",
+                      "notPremium": "升级 Plus 会员使用调试功能",
+                      "oneClickDebug": "一键调试"
+                    },
+                    "markDownPlaceholder": "请输入...(支持使用 Markdown)",
+                    "retrieveCode": {
+                      "tip": "还原到最新提交的代码",
+                      "confirmContent": "你确定要使用最近一次提交的代码来替换现有代码吗？",
+                      "noData": "您尚未提交过任何代码！"
+                    },
+                    "editor-position": "行 {{lineNumber}}，列 {{column}}",
+                    "framework": {
+                      "switchTooltip": "切换框架",
+                      "modalTitle": "选择框架",
+                      "modalDescription": "选择你想要的框架。",
+                      "modalConfirmTitle": "确认切换框架",
+                      "modalConfirmText": "切换框架将会重置未提交的代码。你确定要继续吗？",
+                      "modalConfirmBtn": "继续",
+                      "toastSwitchSuccess": "已更新 {{framework}} 的描述。",
+                      "guide": {
+                        "selectFramework": "选择框架",
+                        "selectFrameworkDescription": "你可以在这里切换至理想的框架",
+                        "selectFrameworkConfirm": "知道了"
+                      }
+                    },
+                    "saveCode": {
+                      "restoredFromCloud": "已从云端恢复",
+                      "restoredFromLocal": "已从本地恢复",
+                      "upgradeToCloud": "升级云端代码存储",
+                      "savedToCloudToast": "您是 Plus 会员，代码已自动存储至云端",
+                      "savedToLocalToastFirst": "代码已存储至本地，",
+                      "savedToLocalToastSecond": " 解锁云端存储",
+                      "upgradeToPremium": "升级 Plus 会员",
+                      "savedToCloud": "已存储",
+                      "savedToLocal": "已存储",
+                      "saving": "存储中..."
+                    },
+                    "format": { "tip": "代码格式化", "formatted": "已格式化" },
+                    "exceedMaxLineLength": "因性能的缘故，每行的字符数量被限制为 10,000。"
+                  },
+                  "description": {
+                    "status": { "tried": "尝试过", "ac": "已解答" },
+                    "somethingWentWrong": "网络错误",
+                    "thanksForVoting": "感谢反馈！",
+                    "topics": "相关标签",
+                    "companies": "相关企业",
+                    "pastSixMonths": "0 - 6 个月",
+                    "pastYear": "6 个月 - 1 年",
+                    "pastTwoYears": "1 年 - 2 年",
+                    "hint": "提示",
+                    "showHints": "显示提示",
+                    "moreActions": "更多操作",
+                    "feedback": "反馈",
+                    "showEnglish": "切换为英文",
+                    "showChinese": "切换为中文",
+                    "feedbackForm": {
+                      "title": "反馈",
+                      "alternative": "您也可以通过 \u003c0\u003eGitHub 快速反馈通道\u003c/0\u003e 进行提交",
+                      "cancel": "取消",
+                      "submit": "提交",
+                      "issuesEncountered": "遇到问题",
+                      "problem": "题目",
+                      "somethingWentWrong": "网络错误",
+                      "additionalFeedback": "额外的反馈",
+                      "description": "我们将致力于提高题目质量，你不喜欢的理由是什么？",
+                      "options": {
+                        "unclearDescription": "描述和示例不清楚或不正确",
+                        "unclearDifficulty": "难度不准确",
+                        "unclearTestCases": "测试用例缺失或不正确",
+                        "runtimeStrict": "时间要求太严格",
+                        "edgeCases": "边界情况太多",
+                        "other": "其他",
+                        "otherPlaceholder": "额外的反馈"
+                      },
+                      "optionRequiredError": "至少选择一个选项."
+                    },
+                    "accepted": "通过次数",
+                    "submissions": "提交次数",
+                    "acRate": "通过率",
+                    "copyright": "© {{year}} 领扣网络（上海）有限公司",
+                    "yes": "是",
+                    "no": "否",
+                    "add2": "添加",
+                    "seenBefore": "面试中遇到过这道题?",
+                    "whichCompany": "请问您应聘的哪家公司？",
+                    "whichPosition": "请问您应聘的岗位类型？",
+                    "whichTimePeriod": "您是在什么时候遇到该题的？",
+                    "whichStage": "请问您进行了哪种形式的面试？",
+                    "thanksForFeedback": "🎉 谢谢您的反馈！",
+                    "relatedTopics": "相关标签",
+                    "add": "加入",
+                    "remove": "移除",
+                    "createNewList": "创建新列表",
+                    "nameListPlaceholder": "请输入列表标题",
+                    "cancel": "取消",
+                    "save": "保存",
+                    "setAsPrivate": "设为私有",
+                    "addToList": "加入收藏夹",
+                    "sqlSchema": "SQL Schema",
+                    "pandasSchema": "Pandas Schema",
+                    "confirm": "确定",
+                    "favoriteSignInError": "登录后才能收藏题目",
+                    "changeLanguageError": "登录后才能切换语言",
+                    "feedbackSignInError": "登录后才能反馈问题",
+                    "likeSignInError": "登录后才能点赞",
+                    "schemaCopySuccess": "已复制到剪贴板",
+                    "shareQuestionDescription": "分享题目",
+                    "viewMyLists": "查看我的收藏夹",
+                    "searchPlaceholder": "搜索",
+                    "ok": "OK",
+                    "addToListError": "Something went wrong. Please try again.",
+                    "similarQuestions": "相似题目",
+                    "discussion": "评论 ({{commentCount}})"
+                  },
+                  "submissions": {
+                    "runtime": "时间",
+                    "memory": "内存",
+                    "beat": "击败",
+                    "noData": "暂无数据",
+                    "noSubmission": "暂无数据",
+                    "copied": "已复制",
+                    "submittedAt": "提交于",
+                    "allSubmissions": "全部提交记录",
+                    "fullCode": "全部代码",
+                    "success": {
+                      "accept": "通过",
+                      "timeTaken": "用时: {{time}}",
+                      "nextQuestion": "下一题",
+                      "moreChallenges": "更多挑战",
+                      "second_short": "s",
+                      "minute_short": "m",
+                      "hour_one": "hr",
+                      "hour_other": "hrs",
+                      "solution": "写题解",
+                      "beatsPercentage": "击败 {{percent}}%",
+                      "ofUsersWithLanguage": "使用 {{language}} 的用户"
+                    },
+                    "details": {
+                      "myCode": "我提交的代码",
+                      "otherCode": "他提交的代码",
+                      "sampleCode": "{{metric}} 的代码示例",
+                      "backToMyCode": "返回我的位置",
+                      "chartHintForAction": "点击查看代码",
+                      "fetchingCodeFromServer": "加载中..."
+                    },
+                    "buttons": {
+                      "close": "关闭",
+                      "details": "详情",
+                      "solution": "写题解"
+                    },
+                    "filters": {
+                      "allStatuses": "所有状态",
+                      "allLanguages": "所有语言",
+                      "time": "时间",
+                      "status": "所有状态",
+                      "language": "所有语言",
+                      "framework": "所有框架",
+                      "runtime": "执行用时",
+                      "memory": "消耗内存",
+                      "notes": "备注",
+                      "penaltyTime": "惩罚时间",
+                      "minute": "分钟"
+                    },
+                    "notes": {
+                      "label": "备注",
+                      "placeholder": "添加备注，例如「暴力解法」、「方法一」等"
+                    },
+                    "relatedTags": {
+                      "label": "相关标签",
+                      "placeholder": "选择相关标签",
+                      "startTyping": "搜索标签",
+                      "noResults": "暂无标签"
+                    },
+                    "chart": {
+                      "runtimeDescription": "执行用时 (%)",
+                      "memoryDescription": "消耗内存 (%)",
+                      "youAreHere": "你在这里",
+                      "hintForAction": "点击图片查看分布详情",
+                      "runtime": "执行用时分布",
+                      "memory": "消耗内存分布",
+                      "percentLabel": "{{percent}}% 的用户使用了类似解法",
+                      "runtimeValueLabel": "Runtime: {{value}} ms",
+                      "memoryValueLabel": "Memory: {{value}} MB",
+                      "noData": "加载中，暂无数据",
+                      "memoryShortDescription": "Distribution (%)",
+                      "runtimeShortDescription": "Distribution (%)",
+                      "codeSample": "代码示例",
+                      "runtimeCodeSampleInfo": "执行用时：{{value}}ms",
+                      "memoryCodeSampleInfo": "消耗内存：{{value}}mb",
+                      "resetZoom": "点击缩略地图以重置"
+                    },
+                    "nonSignedIn": {
+                      "signInTitle": "🔥 登录力扣开始写代码",
+                      "signInInfo": "这里会展示你的提交记录 ",
+                      "signInButton": "登录/注册"
+                    },
+                    "noCode": "There is no code here",
+                    "pending": "Pending...",
+                    "testPassedButTookTooLong": "测试用例通过了，但耗时太长。",
+                    "failedSubmission": {
+                      "runtimeError": "执行出错信息",
+                      "compileError": "编译出错信息",
+                      "lastTestcase": "最后执行的输入"
+                    },
+                    "submissionPreview": {
+                      "embedCode": "嵌入代码",
+                      "copiedEmbedCode": "已复制",
+                      "copyEmbedCode": "复制",
+                      "copyEmbedCodeTooltip": "复制嵌入代码",
+                      "copyLinkTooltip": "复制链接",
+                      "openInNewTabTooltip": "在新标签页打开",
+                      "openInPanelTooltip": "在面板中打开",
+                      "maximizeTooltip": "最大化",
+                      "minimizeTooltip": "最小化",
+                      "invalidSubmissionIdLabel": "无效的提交记录 ID",
+                      "missingSubmissionIdTooltip": "请输入提交记录 ID",
+                      "nonFeSubmissionIdTooltip": "请输入有效的提交记录 ID",
+                      "openIn": "打开"
+                    }
+                  },
+                  "feature-guide": {
+                    "layout": "支持上下、左右拖拽调整布局",
+                    "timer": "\u003c0\u003e计时器：\u003c/0\u003e 现在可以在做题过程中使用计时器了！",
+                    "debugger": "\u003c0\u003e调试器：\u003c/0\u003e 我们将 Debugger 移动到了这里",
+                    "problemSwitch": "这里可以快速切换到 \u003c0\u003e上一题/下一题\u003c/0\u003e ",
+                    "problemList": "这里可以快速返回\u003c0\u003e题目列表\u003c/0\u003e",
+                    "discussion": "新的 \u003c0\u003e“讨论”，\u003c/0\u003e 您可以发布任何想法",
+                    "solution": "将 \u003c0\u003e“评论”\u003c/0\u003e 的名字修改为新的 \u003c0\u003e“题解” 名\u003c/0\u003e",
+                    "back": "返回",
+                    "skip": "跳过",
+                    "next": "下一步",
+                    "ok": "确定",
+                    "title": "🎉 我们的新界面"
+                  },
+                  "feature-guide-dynamic": {
+                    "back": "返回",
+                    "skip": "跳过",
+                    "next": "下一步",
+                    "explore": "探索",
+                    "step1": {
+                      "title": "全新灵动布局",
+                      "des": "我们珍视每一种独特的思考与学习方式，并致力于提供个性化的支持。",
+                      "tip": ""
+                    },
+                    "step2": {
+                      "title": "自定义布局",
+                      "des": "不满意默认布局？从此页面内容由你定义，让编码与学习事半功倍。",
+                      "tip": "拖拽标签页或标签面板以定义布局"
+                    },
+                    "step3": {
+                      "title": "自定义尺寸",
+                      "des": "屏幕空间受限？现在由你掌控如何利用空间，聚焦真正重要的内容。",
+                      "tip": "拖拽标签面板间的空隙以改变尺寸"
+                    },
+                    "step4": {
+                      "title": "沉浸式全屏",
+                      "des": "干扰信息过多？轻松双击即可隔绝干扰，遁入沉浸。",
+                      "tip": "双击面板顶部进入全屏模式"
+                    },
+                    "step5": {
+                      "title": "全局工具栏",
+                      "des": "承载聚合力扣核心功能，并将持续拓展，敬请期待。",
+                      "tip": ""
+                    }
+                  },
+                  "solutions": {
+                    "filter": {
+                      "searchPlaceholder": "搜索",
+                      "tags": { "all": "不限", "mySolution": "我的" },
+                      "sortBy": {
+                        "placeholder": "排序",
+                        "hot": "热度最高",
+                        "most_posts": "发布数量",
+                        "most_relevant": "默认排序",
+                        "most_votes": "点赞最多",
+                        "newest_to_oldest": "最新发布",
+                        "oldest_to_newest": "最早发布",
+                        "recent_activity": "默认排序",
+                        "recent_activity_short": "默认排序",
+                        "hot_short": "热度最高",
+                        "newest_to_oldest_short": "最新发布",
+                        "oldest_to_newest_short": "最早发布",
+                        "most_votes_short": "点赞最多",
+                        "most_relevant_short": "默认排序"
+                      }
+                    },
+                    "solution": "题解",
+                    "writeSolution": "写题解",
+                    "continueSolution": "继续写题解",
+                    "tags": {
+                      "official": "官方",
+                      "pinned": "精选",
+                      "favorite": "收藏",
+                      "mySolution": "我的题解",
+                      "hidden": "灰屏"
+                    },
+                    "post": {
+                      "invalidSolutionTitle": "题解不存在",
+                      "invalidSolutionDescription": "请查看其他题解",
+                      "prevLabel": "上一篇题解",
+                      "nextLabel": "下一篇题解",
+                      "isAdmin": "管理员",
+                      "reputationTooltip": "声望",
+                      "share": "分享",
+                      "addToCollection": "收藏",
+                      "isInCollection": "已收藏",
+                      "votes": "({{votesCount}} votes)",
+                      "shareCopySuccess": "分享链接复制到剪切板",
+                      "addToFavoriteSuccess": "添加成功",
+                      "removeFromFavoriteSuccess": "移除成功",
+                      "feedbackTooltip": "反馈",
+                      "backToTop": "回到顶部",
+                      "genericError": "未知错误",
+                      "upvote": "有用",
+                      "comments": "评论",
+                      "allSolutions": "全部题解",
+                      "more": {
+                        "error": "网络错误",
+                        "cancel": "取消",
+                        "edit": "编辑",
+                        "editorsPick": "设为精选",
+                        "subscribe": "Subscribe",
+                        "subscribeMessage": "Subscribed",
+                        "unsubscribe": "Unsubscribe",
+                        "unsubscribeMessage": "Unsubscribed",
+                        "delete": "删除",
+                        "deleteMessage": "删除成功",
+                        "deleteConfirmText": "确定删除?",
+                        "deleteConfirmBtn": "删除",
+                        "remove": "下线",
+                        "restore": "Restore",
+                        "restoreMessage": "Restored",
+                        "restoreConfirmText": "Are you sure you want to restore this post?",
+                        "restoreConfirmBtn": "Restore",
+                        "report": "举报",
+                        "reportMessage": "举报成功",
+                        "officialPick": "设为官方",
+                        "pin": "Pin",
+                        "pinMessage": "Pinned",
+                        "pinConfirmText": "Are you sure you want to pin this post?",
+                        "pinConfirmBtn": "Pin",
+                        "uneditorsPick": "取消精选",
+                        "undelete": "恢复删除",
+                        "unmute": "取消屏蔽",
+                        "unofficialPick": "取消官方",
+                        "unpin": "Unpin",
+                        "unpinMessage": "Unpinned",
+                        "unpinConfirmText": "Are you sure you want to unpin this post?",
+                        "unpinConfirmBtn": "Unpin",
+                        "unsunk": "取消下沉",
+                        "hide": "Hide",
+                        "hideMessage": "Hid the post",
+                        "hideConfirmText": "Are you sure you want to hide this post?",
+                        "hideConfirmBtn": "Hide",
+                        "hideFromTrending": "Hide from trending",
+                        "hideFromTrendingMessage": "Hid post from trending",
+                        "hideFromTrendingConfirmText": "Are you sure you want to hide this post from trending?",
+                        "hideFromTrendingConfirmBtn": "Hide from trending",
+                        "show": "Show",
+                        "showMessage": "Showed the post",
+                        "showConfirmText": "Are you sure you want to show this post to everyone?",
+                        "showConfirmBtn": "Show",
+                        "sunk": "下沉",
+                        "moveToDiscussion": "Move to Discussion",
+                        "moveToDiscussionMessage": "Moved to Discussion",
+                        "moveToDiscussionConfirmText": "Are you sure you want to move this post to Discussion?",
+                        "moveToDiscussionConfirmBtn": "Move to Discussion",
+                        "mute": "灰色屏蔽"
+                      },
+                      "rateSuccess": "Thanks for rating this solution!"
+                    },
+                    "searchResult": {
+                      "commentPrefix": " comment",
+                      "replyPrefix": " reply to ",
+                      "colon": ": "
+                    },
+                    "noDirectResultsHint": "No result. Show you some related content",
+                    "noResults": "暂无相关题解内容",
+                    "noMoreResults": "已经到底了",
+                    "backToTop": "回到顶部",
+                    "report": {
+                      "reportModalTitle": "举报",
+                      "contentPlaceholder": "其他",
+                      "cancel": "取消",
+                      "confirm": "确认",
+                      "advertising": "骚扰广告",
+                      "sexual": "黄色内容",
+                      "violent": "暴力内容",
+                      "terrorism": "恐怖言论",
+                      "illegal": "违法内容",
+                      "politics": "政治言论",
+                      "abuse": "辱骂他人",
+                      "fake": "造谣传谣",
+                      "nonEnglish": "Non English content",
+                      "other": "其他",
+                      "reportSuccess": "提交成功",
+                      "reportError": "提交遇到问题，请稍后再试！"
+                    },
+                    "blocker": {
+                      "subscribeToUnlock": "Subscribe to unlock.",
+                      "subscribeSubTitle": "Thanks for using LeetCode! To view this solution you must subscribe to premium.",
+                      "subscribe": "Subscribe"
+                    },
+                    "videoSolutionTooltip": "Video Solution",
+                    "premiumOnlyTooltip": "Premium Solution",
+                    "switchToRightTooltip": "移到右边",
+                    "switchToLeftTooltip": "移到左边",
+                    "switchFirstTimePopoverContent": "您可以通过点击 “切换视图” 的按钮将题解文章的视图进行左右切换",
+                    "switchFirstTimePopoverBtn": "明白了",
+                    "shareSolutionBanner": {
+                      "lastSubmissionBeats": "你最近一次提交运行时间超过了 \u003c0\u003e{{percentage}}\u003c/0\u003e 的用户",
+                      "lastSubmissionBeatsSmall": "你最近一次提交运行时间超过了 \u003c0\u003e{{percentage}}\u003c/0\u003e 的用户",
+                      "lastSubmissionMemoryBeats": "你最近一次提交运行内存超过了 \u003c0\u003e{{percentage}}\u003c/0\u003e 的用户",
+                      "lastSubmissionMemoryBeatsSmall": "你最近一次提交运行内存超过了 \u003c0\u003e{{percentage}}\u003c/0\u003e 的用户",
+                      "signInAndShareSolutions": "登录并分享题解",
+                      "signIn": "登录",
+                      "shareMySolution": "发布题解",
+                      "share": "分享",
+                      "getACSubmissionsToPublish": "你需要先通过这道题目才能发布题解"
+                    },
+                    "sideBySide": {
+                      "enterMode": "开启双栏模式",
+                      "exitMode": "退出双栏模式",
+                      "modeOn": "已开启双栏模式",
+                      "modeOff": "已退出双栏模式",
+                      "enterGuideTitle": "浏览多份内容?",
+                      "enterGuideDesc": "试试开启双栏模式，你还可以进一步在设置中自定义你的浏览体验。",
+                      "exitGuideTitle": "退出双栏模式",
+                      "exitGuideDesc": "退出后，即可专注浏览唯一标签页。",
+                      "goToSettings": "打开设置",
+                      "gotIt": "我知道了"
+                    }
+                  },
+                  "comments": {
+                    "edited": "(编辑过)",
+                    "tooShort": "评论过短",
+                    "noComments": "暂无评论",
+                    "reply": "回复",
+                    "mentionInputPlaceholder": "用户或题目",
+                    "user": "用户",
+                    "problem": "题目",
+                    "mdRules": {
+                      "inlineCode": "行内代码...",
+                      "codeBlock": "code block",
+                      "link": "leetcode",
+                      "href": "https://leetcode.cn"
+                    },
+                    "pinnedBy": "被 {{pinnedBy}} 置顶",
+                    "share": "分享",
+                    "edit": "编辑",
+                    "shareCopySuccess": "已复制到剪切板",
+                    "hideReplies": "隐藏回复",
+                    "showReplies": "展示 {{num}} 条回复",
+                    "cancel": "取消",
+                    "confirm": "确定",
+                    "preview": "预览",
+                    "comment": "评论",
+                    "typeCommentHere": "请输入评论...",
+                    "comments": "评论",
+                    "sortBy": "排序",
+                    "newestToOldest": "最新",
+                    "oldestToNewest": "最早",
+                    "mostVotes": "赞成数",
+                    "best": "最热",
+                    "editor": "编辑",
+                    "youMust": "您需要先",
+                    "verifyYourEmail": "绑定邮箱",
+                    "first": "first",
+                    "readMore": "展开全部",
+                    "somethingWentWrong": "未知错误",
+                    "areYouSure": "操作确认",
+                    "confirmDeleteComment": "确定删除该条评论？",
+                    "confirmRestoreComment": "确定恢复该条评论？",
+                    "confirmHideComment": "确定将该条评论灰色屏蔽？",
+                    "confirmShowComment": "确定将该条评论取消灰色屏蔽？",
+                    "confirmPinComment": "确定置顶该评论？",
+                    "confirmUnpinComment": "确定移除置顶？",
+                    "reward": "赞赏",
+                    "delete": "删除",
+                    "hide": "隐藏",
+                    "show": "展示",
+                    "askQuestion": "问问题",
+                    "feedback": "反馈",
+                    "tips": "提示",
+                    "chooseAType": "请选择一个类型",
+                    "showMoreReplies": "展示更多",
+                    "hideSuccess": "灰色屏蔽成功.",
+                    "showSuccess": "取消灰色屏蔽成功.",
+                    "pinSuccess": "Comment has been pinned.",
+                    "unpinSuccess": "Comment has been unpinned.",
+                    "deleteSuccess": "删除成功",
+                    "restore": "Restore",
+                    "restoreSuccess": "成功恢复评论",
+                    "hidden": "Hidden",
+                    "report": "举报",
+                    "pin": "设为精选",
+                    "pinned": "精选",
+                    "unpin": "取消精选",
+                    "hideComment": "灰色屏蔽",
+                    "showComment": "取消灰色屏蔽",
+                    "move": "Move to Solution",
+                    "moveTitle": "Title:",
+                    "moveTitlePlaceholder": "Enter title here",
+                    "moveSuccess": "Comment Successfully Moved",
+                    "postSuccess": "发布成功",
+                    "genericError": "Something went wrong",
+                    "signInVoteError": "You must sign in to vote",
+                    "verifyVoteError": "You must verify your email to vote"
+                  },
+                  "post-solution": {
+                    "meta": {
+                      "newTitle": "{{title}} - LeetCode - New Solution",
+                      "editTitle": "{{title}} - LeetCode - Edit Solution"
+                    },
+                    "filterTopic": "搜索标签",
+                    "publishSolution": "写题解",
+                    "publishSolutionTooltip": "您需要先通过这道题目才能发布题解",
+                    "restore": "是否清空草稿？",
+                    "discard": "清空",
+                    "discardConfirmTitle": "您确定要清空草稿吗？",
+                    "discardConfirmContent": "如果清空草稿，会删除当前编辑器中的所有内容",
+                    "discardConfirmOk": "确定",
+                    "discardConfirmCancel": "取消",
+                    "guide": "力扣「Markdown 编辑器」使用说明",
+                    "check": "查看",
+                    "blockCode": "「代码块」",
+                    "tag": "标签",
+                    "related": "与题相关",
+                    "selectATag": "请为该题解选择至少1个标签",
+                    "post": "发布题解",
+                    "publishError": "发布失败",
+                    "imgUploadSuccuss": "上传成功",
+                    "imgUploadError": "上传失败，请重试",
+                    "guideTooltip": "Markdown 指引",
+                    "saved": "已保存为草稿"
+                  },
+                  "new-study-plan": {
+                    "detail": {
+                      "metadata": {
+                        "title": "{{plan}} - 学习计划 - 力扣（LeetCode）全球极客挚爱的技术成长平台",
+                        "description": "学习计划 - 力扣（LeetCode）全球极客挚爱的技术成长平台",
+                        "notFound": "未找到学习计划"
+                      },
+                      "weekTextAbbr": {
+                        "sun": "周日",
+                        "mon": "周一",
+                        "tue": "周二",
+                        "wed": "周三",
+                        "thu": "周四",
+                        "fri": "周五",
+                        "sat": "周六"
+                      },
+                      "weekText": {
+                        "sun": "周日",
+                        "mon": "周一",
+                        "tue": "周二",
+                        "wed": "周三",
+                        "thu": "周四",
+                        "fri": "周五",
+                        "sat": "周六"
+                      },
+                      "myPlan": "我的计划",
+                      "problemLeft": "题待完成",
+                      "problemsLeft": "题待完成",
+                      "notification": "注意",
+                      "setUpSp": "设置学习计划",
+                      "solvedText": "完成",
+                      "problem": "题",
+                      "problems": "题",
+                      "learnMore": "更多信息",
+                      "you": "你",
+                      "weeklyRanking": "周榜",
+                      "weeklyRankingToolTip": "按本周完成题目数计算排名，每小时更新一次榜单数据（若本周未完成任何计划内题目，不计算排名）",
+                      "solvePrev": "以下时间每天完成",
+                      "solveNext": "道题",
+                      "startTitle": "设置学习计划",
+                      "confirmStartText": "计划保存后不可修改哦，确定保存吗？",
+                      "quitTypeTipPrev": "请输入本计划标题：",
+                      "quitTypeTipNext": " ",
+                      "subscribeToUnlock": "升级 Plus 会员",
+                      "subscribeToUnlockContent": "升级到 Plus 会员，可解锁该学习计划",
+                      "start": "开始",
+                      "share": "分享",
+                      "backToExplore": "返回学习计划",
+                      "goCurrentPage": "重新尝试该计划",
+                      "premiumTip": "开通会员",
+                      "copyLink": "复制链接",
+                      "copiedSuccess": "已复制分享链接",
+                      "more": "更多",
+                      "quit": "退出",
+                      "back": "返回",
+                      "quitTitle": "关闭学习计划",
+                      "quitContent": "当关闭此学习计划时，所有已解决问题的都会被重置，且无法恢复进度。你确定你要关闭吗？",
+                      "showTags": "显示标签",
+                      "summary": "概述",
+                      "showMore": "展开",
+                      "showLess": "收起",
+                      "award": "勋章",
+                      "awardCongratulation": "太棒啦！你已经获得此勋章",
+                      "related": "相关计划",
+                      "viewMore": "查看更多",
+                      "todo": "待完成",
+                      "attempted": "尝试过",
+                      "solved": "已解答",
+                      "markAsSolved": "标记为已解决",
+                      "markAsSolvedTip": "你以前曾解决过这道题目，是否将其 '标记为已解决' ？",
+                      "difficulty": "难度",
+                      "congratulation": "🎉 恭喜你！",
+                      "solvedAllProblemsText": "你已经解决了 {{title}} 中的所有问题！",
+                      "checkBadge": "前往您的",
+                      "profilePage": "个人主页",
+                      "wearGlory": "并佩戴勋章！",
+                      "checkMyStudyPlan": "回到我的学习计划",
+                      "joinSuccessfully": "已加入",
+                      "quitSuccessfully": "已退出",
+                      "setSuccessfully": "已设置",
+                      "errorTip": "遇到些问题，请再次尝试",
+                      "quitTip": "若您退出该学习计划，所有已解决的问题都将被重置，且无法恢复。",
+                      "pastSolved": "解答过",
+                      "solution": "题解",
+                      "points": "分",
+                      "ranking": "排名"
+                    },
+                    "list": {
+                      "metadata": {
+                        "title": "学习计划 - 在 LeetCode 上持续练习来获得面试的成功"
+                      },
+                      "title": "学习计划",
+                      "ongoing": "进行中",
+                      "myPlan": "我的学习计划",
+                      "featured": "精选",
+                      "showMore": "展开",
+                      "revertOldPlan": "查看旧版的学习计划",
+                      "revertOldPlanTipTitle": "🌟 返回到旧版的学习计划",
+                      "revertOldPlanTipDesc": "你可以点击该按钮前往旧版的学习计划",
+                      "cancel": "取消",
+                      "iSee": "知道了"
+                    },
+                    "myStudyPlan": {
+                      "metadata": {
+                        "title": "我的学习计划 - 力扣 (LeetCode) 全球极客挚爱的技术成长平台",
+                        "desc": "加入到该学习计划可以追踪你的做题进度，有效地获得能力的提升！"
+                      },
+                      "title": "我的学习计划",
+                      "ongoing": "进行中",
+                      "history": "已结束的计划",
+                      "noOngoingPlan": "暂无进行中的计划",
+                      "noHistoryPlan": "暂无已结束的计划"
+                    },
+                    "common": {
+                      "studyPlan": "学习计划",
+                      "tryNow": "立即开启",
+                      "noTanks": "暂不尝试",
+                      "newPlan": "✨ 全新的学习计划！",
+                      "newPlanDesc": "加入一个新的学习计划，最大限度地发挥你的学习潜力。追踪你的进展，专注于每天的问题，以取得持续增长",
+                      "seeAll": "查看更多",
+                      "totalProgress": "完成进度",
+                      "progress": "完成进度",
+                      "completed": "完成时间",
+                      "giveUp": "退出时间",
+                      "ongoing": "进行中",
+                      "ongoingStudyPlan": "进行中的学习计划",
+                      "later": "暂不参与",
+                      "joinInQDTitle": "是否开始该学习计划？",
+                      "joinInQD": "加入到该学习计划可以追踪你的做题进度，有效地获得能力的提升！",
+                      "doNotRemind": "今天不再提示",
+                      "exploreButton": "探索学习计划",
+                      "notFoundText": "抱歉，无法找到该网页，请检查你的输入内容或重新探索一个新的学习计划"
+                    },
+                    "survey": { "submit": "提交" },
+                    "satisfactionSurvey": { "submitBtnText": "提交" }
+                  }
+                }
+              },
+              "initialLocale": "en",
+              "ns": [
+                "common",
+                "problems",
+                "console",
+                "code-editor",
+                "description",
+                "submissions",
+                "feature-guide",
+                "feature-guide-dynamic",
+                "solutions",
+                "comments",
+                "post-solution",
+                "new-study-plan"
+              ],
+              "userConfig": {
+                "i18n": { "defaultLocale": "zh", "locales": ["en", "zh"] },
+                "react": { "useSuspense": false },
+                "reloadOnPrerender": false,
+                "default": {
+                  "i18n": { "defaultLocale": "zh", "locales": ["en", "zh"] },
+                  "react": { "useSuspense": false },
+                  "reloadOnPrerender": false
+                }
+              }
+            },
+            "layoutPreferences": { "solutionSide": "left" }
+          },
+          "__N_SSP": true
+        },
+        "page": "/problems/[slug]/[[...tab]]",
+        "query": { "slug": "minimum-rectangles-to-cover-points" },
+        "buildId": "0C-PWTc2B7J0DqOVTs_E0",
+        "isFallback": false,
+        "gssp": true,
+        "scriptLoader": []
+      }
+    </script>
+    <div id="modal-root"></div>
+  </body>
+</html>
