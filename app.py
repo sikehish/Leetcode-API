@@ -1,6 +1,5 @@
 from flask import Flask, jsonify
 import requests
-import json
 
 app = Flask(__name__)
 
@@ -11,8 +10,17 @@ def get_leetcode_questions():
     response = requests.get(url, headers=headers)
     
     if response.status_code == 200:
-        data = json.loads(response.text)
-        return jsonify(data['stat_status_pairs'])
+        data = response.json() #OR json.loads(response.text)
+        links = [
+            {
+                "title_slug": child["stat"]["question__title_slug"],
+                "difficulty": child["difficulty"]["level"],
+                "question_id": child["stat"]["frontend_question_id"],
+                "title": child["stat"]["question__title"]
+            }
+            for child in data["stat_status_pairs"] if not child["paid_only"]
+        ]
+        return jsonify(links)
     else:
         return jsonify({'error': 'Failed to fetch LeetCode questions'}), response.status_code
 
