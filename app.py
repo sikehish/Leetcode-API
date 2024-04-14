@@ -22,6 +22,7 @@ def get_leetcode_questions():
         ALGORITHMS_LINK = 'https://leetcode.com/api/problems/algorithms/'
         PROBLEMS_URL = "https://leetcode.com/problems/"
         driver = webdriver.Chrome()
+        driver.fullscreen_window()
 
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
         response = requests.get(ALGORITHMS_LINK, headers=headers)
@@ -57,11 +58,11 @@ def get_leetcode_questions():
             return jsonify({"message": "Problems fetched and stored successfully"})
         else:
             driver.quit()
-            return jsonify({'error': 'Failed to fetch LeetCode questions'}), response.status_code
+            return jsonify({'error': 'Failed to fetch LeetCode questions', 'message': response.text}), response.status_code
     except Exception as e:
         traceback.print_exc()
         driver.quit()
-        return jsonify({'error': 'An error occurred while processing the request'}), 500
+        return jsonify({'error': 'An error occurred while processing the request','message':repr(e)}), 500
     
     
 # For testing purposes
