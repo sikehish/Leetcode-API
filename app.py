@@ -1,28 +1,32 @@
 from flask import Flask, jsonify
-from bs4 import BeautifulSoup
 from selenium import webdriver
-import requests,os,json
-from time import sleep
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
+from pymongo import MongoClient
+from bson.json_util import dumps
+from dotenv import load_dotenv
+import requests,os
+
+load_dotenv
 
 app = Flask(__name__)
 
+MONGO_URI = os.environ.get("MONGO_URI")
+client = MongoClient(MONGO_URI)
+db = client["leetcode-api"]
+problems_collection = db["problems"]
+
 @app.route('/leetcode')
 def get_leetcode_questions():
-
     ALGORITHMS_LINK = 'https://leetcode.com/api/problems/algorithms/'
     PROBLEMS_URL = "https://leetcode.com/problems/"
-    driver=webdriver.Chrome()
-    # driver.minimize_window()
-    
+    driver = webdriver.Chrome()
 
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
     response = requests.get(ALGORITHMS_LINK, headers=headers)
     
     if response.status_code == 200:
-        data = response.json() #OR json.loads(response.text)
-        links = [
+        data = response.json()
+        problems = [
             {
                 "title_slug": child["stat"]["question__title_slug"],
                 "difficulty": child["difficulty"]["level"],
@@ -31,21 +35,25 @@ def get_leetcode_questions():
             }
             for child in data["stat_status_pairs"] if not child["paid_only"]
         ]
-        for link in links:
-            url=PROBLEMS_URL + link["title_slug"]
-            print(url, " ", link["question_id"])
+        for problem in problems:
+            existing_problem = problems_collection.find_one({"title_slug": problem["title_slug"]})
+            if existing_problem:
+                continue  
+
+            url = PROBLEMS_URL + problem["title_slug"]
             driver.get(url)
-            # waiting for the page to load completely 
             driver.implicitly_wait(60)
 
-            html_content=driver.execute_script("return document.getElementsByTagName('html')[0].innerHTML")
-            # sleep(5)
-
+            html_content = driver.execute_script("return document.getElementsByTagName('html')[0].innerHTML")
             problem_description = driver.find_element(By.CLASS_NAME, 'elfjS')
-            link["description"]=problem_description.text
+            problem["description"] = problem_description.text
+            
+            problems_collection.insert_one(problem)
 
-        return jsonify(links)
+        driver.quit()
+        return jsonify({"message": "Problems fetched and stored successfully"})
     else:
+        driver.quit()
         return jsonify({'error': 'Failed to fetch LeetCode questions'}), response.status_code
     
 # For testing purposes
