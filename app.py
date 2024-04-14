@@ -60,7 +60,7 @@ def get_leetcode_questions():
 @app.route('/html')
 def get_leetcode_html():
     driver = webdriver.Chrome() 
-    driver.minimize_window()
+    # driver.minimize_window()
 
     driver.get('https://leetcode.com/problems/harshad-number')
 
