@@ -31,7 +31,9 @@ def get_leetcode_questions():
             problems = [
                 {
                     "title_slug": child["stat"]["question__title_slug"],
-                    "difficulty": child["difficulty"]["level"],
+                    "difficulty": "Easy" if child["difficulty"]["level"] == 1 else 
+                      "Medium" if child["difficulty"]["level"] == 2 else 
+                      "Hard",
                     "question_id": child["stat"]["frontend_question_id"],
                     "title": child["stat"]["question__title"]
                 }
@@ -47,15 +49,18 @@ def get_leetcode_questions():
                     continue  
 
                 url = PROBLEMS_URL + problem["title_slug"]
-                # print(url, " ", problem["question_id"])
+
                 driver.get(url)
                 driver.implicitly_wait(60)
 
                 html_content = driver.execute_script("return document.getElementsByTagName('html')[0].innerHTML")
                 sleep(5)
+                driver.find_elements(By.CLASS_NAME, 'text-gray-4')[0].click()
                 problem_description = driver.find_element(By.CLASS_NAME, 'elfjS')
                 problem["description"] = problem_description.text
-                # print(problem)
+                topics_elements = driver.find_element(By.CLASS_NAME, 'mt-2.flex.flex-wrap.gap-1.pl-7').find_elements(By.TAG_NAME, 'a')
+                topics_text = [topic.text for topic in topics_elements]
+                problem["topics"]=topics_text
                 problems_collection.insert_one(problem)
 
             driver.quit()
@@ -74,22 +79,24 @@ def get_leetcode_html():
     driver = webdriver.Chrome() 
     # driver.minimize_window()
 
-    driver.get('https://leetcode.com/problems/harshad-number')
+    driver.get('https://leetcode.com/problems/minimum-falling-path-sum-ii/')
 
     # waiting for the page to load completely
     driver.implicitly_wait(10)
 
     html_content=driver.execute_script("return document.getElementsByTagName('html')[0].innerHTML")
     # sleep(5)
-
+    driver.find_elements(By.CLASS_NAME, 'text-gray-4')[0].click()
     problem_description = driver.find_element(By.CLASS_NAME, 'elfjS')
-    return jsonify({"content":problem_description.text})
+    driver.find_element(By.CLASS_NAME,"transition-colors.text-gray-4").click()
+    topics_elements = driver.find_element(By.CLASS_NAME, 'mt-2.flex.flex-wrap.gap-1.pl-7').find_elements(By.TAG_NAME, 'a')
+    
+    topics_text = [topic.text for topic in topics_elements]
+
+    return jsonify({"content": problem_description.text, "topics": topics_text})
+
 
 
 if __name__ == '__main__':
     app.run(debug=True)
 
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
